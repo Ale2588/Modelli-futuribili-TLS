@@ -114,7 +114,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
  <div class="wrap">
   <span class="etichetta-grande">Domanda 01 · Energia</span>
   <h1 class="domanda" id="titolo">Cosa succede se l'energia costa <em>10 volte meno?</em></h1>
-  <p class="testo-grande">Non gratis: molto meno cara. Grazie alla fusione o a un'altra fonte, produrre energia costa una frazione di oggi. Scegli quanto meno, poi guarda cosa diventa possibile e che mondo ne esce.</p>
+  <p class="testo-grande">Immaginiamo che la fusione, o un'altra fonte, faccia crollare il costo di produzione dell'energia. Non a zero: a un terzo, a un decimo, a un centesimo di oggi. Scegli di quanto e guarda cosa cambia.</p>
   <div>
    <span class="etichetta">Produrre energia costa</span>
    <div class="fattori" id="fattori" role="group" aria-label="Quante volte meno costa produrre energia"></div>
@@ -129,8 +129,8 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
   <h2 class="titolo" style="margin-top:8px">La bolletta ha un <em>pavimento</em></h2>
   <div class="due">
    <div>
-    <p>Oggi in una bolletta di casa circa metà paga l'energia prodotta e metà reti, accumuli, distribuzione e oneri. Anche se produrre diventa quasi gratis, quella seconda metà resta: cavi, trasformatori, batterie e manutenzione costano. Per questo passare da 10 a 100 volte meno cambia poco, se le reti restano care.</p>
-    <p>L'industria paga soprattutto l'energia, meno le reti: per lei il calo è più forte. È il prezzo che decide cosa diventa conveniente produrre.</p>
+    <p>In una bolletta di casa, circa metà paga l'energia. L'altra metà paga il viaggio: cavi, trasformatori, batterie, manutenzione e oneri. Se l'energia costa meno ma il viaggio no, la bolletta scende fino a un certo punto e poi si ferma. È il pavimento. Per questo passare da 10 a 100 volte meno cambia poco, finché le reti costano come oggi.</p>
+    <p>Le fabbriche prendono l'elettricità dall'alta tensione e pagano meno il viaggio. Per loro il calo è più forte, ed è il loro prezzo che decide quali industrie nuove diventano convenienti.</p>
     <div class="ctrl" style="margin-top:20px">
      <label for="c_reti">Anche le reti costano meno?<output id="o_reti"></output></label>
      <input type="range" id="c_reti" min="1" max="5" step="0.25">
@@ -146,8 +146,9 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 <section class="band" data-theme="oliva" id="gcam">
  <div class="wrap">
   <span class="etichetta-grande">2 · Cosa dice un modello del mondo reale</span>
-  <h2 class="titolo" style="margin-top:8px">Lo abbiamo chiesto a GCAM: <em id="gtit">10 volte meno</em></h2>
-  <p>GCAM è il modello aperto del Pacific Northwest National Laboratory, uno di quelli usati per gli scenari dell'IPCC: 32 regioni, energia, suolo, acqua e clima, tarati su dati reali. Gli abbiamo dato una nuova fonte elettrica programmabile e senza emissioni, che tra il 2030 e il 2050 arriva a costare 3, 10, 30 o 100 volte meno di oggi, disponibile ovunque. Qui sotto il confronto con lo scenario di riferimento, senza la nuova fonte.</p>
+  <h2 class="titolo" style="margin-top:8px">La prova con un modello vero: <em id="gtit">10 volte meno</em></h2>
+  <p>Fin qui sono ipotesi nostre. Per metterle alla prova abbiamo usato GCAM, un modello pubblico del Pacific Northwest National Laboratory americano, tra quelli usati negli scenari dell'IPCC. Divide il mondo in 32 regioni e simula energia, suolo, acqua e clima con dati reali.</p>
+  <p>Gli abbiamo aggiunto una fonte elettrica nuova: pulita, disponibile giorno e notte, in tutto il mondo. Tra il 2030 e il 2050 il suo costo scende fino a un terzo, un decimo, un trentesimo o un centesimo di quello di oggi. Confrontiamo il risultato con lo stesso mondo senza la nuova fonte.</p>
   <div id="gcorpo"></div>
  </div>
 </section>
@@ -156,7 +157,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
  <div class="wrap">
   <span class="etichetta-grande">3 · Cosa diventa possibile</span>
   <h2 class="titolo" style="margin-top:8px">Sotto certe soglie, <em>nascono industrie nuove</em></h2>
-  <p class="secondario">Ogni attività qui sotto diventa conveniente quando il prezzo dell'energia per l'industria scende sotto una soglia. La linea arancione è dove arrivi con le scelte fatte sopra; tutto ciò che sta sopra la linea è sbloccato. Le soglie sono ordini di grandezza da verificare, non numeri esatti.</p>
+  <p class="secondario">Alcune produzioni convengono solo se l'energia costa poco. Qui sotto le trovi in ordine, dalla più facile alla più difficile, con il prezzo sotto il quale conviene farle. La linea arancione è il prezzo che paga l'industria con le tue scelte: tutto quello che sta sopra la linea diventa conveniente. Le soglie sono stime di massima, da verificare una per una.</p>
   <div class="scala" id="scala"></div>
  </div>
 </section>
@@ -164,8 +165,8 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 <section class="band" data-theme="carta">
  <div class="wrap">
   <span class="etichetta-grande">4 · Che mondo ne esce</span>
-  <h2 class="titolo" style="margin-top:8px">L'energia non decide da sola: <em>contano le altre scelte</em></h2>
-  <p>Con lo stesso prezzo dell'energia possono uscire mondi opposti. Dipende da chi controlla impianti e reti, da chi riceve i guadagni, da quanto l'energia diventa automazione. Cambia le risposte e guarda il mondo nel 2080.</p>
+  <h2 class="titolo" style="margin-top:8px">Stesso prezzo, <em>mondi diversi</em></h2>
+  <p>Questa parte non viene da GCAM, che non simula lavoro, disuguaglianza e politica. È un nostro modello semplificato, con le ipotesi dichiarate. Lo stesso prezzo dell'energia può portare a mondi opposti: dipende da chi possiede impianti e reti, da chi riceve i guadagni, da quanto lavoro passa alle macchine. Rispondi alle domande e guarda il mondo nel 2080.</p>
   <div class="lab">
    <div class="leve"><div class="preset" id="preset" role="group" aria-label="Mondi di esempio"></div><div id="leve"></div></div>
    <article class="mondo" id="mondo">
@@ -182,8 +183,8 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 <section class="band" data-theme="oliva">
  <div class="wrap">
   <span class="etichetta-grande">5 · Dove si sposta la scarsità</span>
-  <h2 class="titolo" style="margin-top:8px">Quando qualcosa costa poco, <em>il valore migra</em></h2>
-  <p>La linea centrale è "come oggi". A sinistra ciò che nel 2080 è più abbondante, a destra ciò che diventa più conteso, in rapporto alla ricchezza che lo insegue.</p>
+  <h2 class="titolo" style="margin-top:8px">Se l'energia costa poco, <em>cosa diventa caro?</em></h2>
+  <p>Quando una cosa diventa abbondante, il valore si sposta su ciò che resta scarso. La linea centrale è la situazione di oggi: a sinistra ciò che nel 2080 sarà più abbondante, a destra ciò che sarà più conteso. Sono stime del nostro modello semplificato.</p>
   <div class="sasse etichetta"><span></span><div><span>← più abbondante</span><span>più scarso →</span></div><span></span></div>
   <div class="sc" id="sc"></div>
  </div>
@@ -194,10 +195,10 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
   <span class="etichetta-grande">Come è fatto</span>
   <h2 class="titolo" style="margin-top:8px">Un modello esplorativo, <em>con le ipotesi in vista</em></h2>
   <div class="cols">
-   <div><b>Cosa fa</b><p>Simula il mondo intero anno per anno, dal 2030 al 2080. Il nuovo prezzo arriva con una curva a S; da lì derivano consumi, attività sbloccate, lavoro, disuguaglianza, clima, tensioni geopolitiche.</p></div>
-   <div><b>Cosa è ancorato ai dati</b><p>Il punto di partenza (prezzi di oggi, peso delle reti in bolletta) e la reazione dei consumi al prezzo (elasticità intorno a 0,6). Le soglie delle attività sono ordini di grandezza dalla letteratura tecnica, da verificare una per una.</p></div>
-   <div><b>Cosa è ancora ipotesi</b><p>Gli effetti su lavoro, disuguaglianza e geopolitica sono coefficienti ragionevoli, non stime. Servono a vedere quali scelte separano un mondo dall'altro, non a prevedere quale arriverà.</p></div>
-   <div><b>Il passo successivo</b><p>Stiamo facendo girare GCAM, il modello globale aperto del Pacific Northwest National Laboratory (32 regioni, energia, suolo, acqua, clima), con una nuova fonte a 3, 10, 30 e 100 volte meno. I suoi risultati sostituiranno le ipotesi fisiche di questa pagina.</p></div>
+   <div><b>Due modelli</b><p>La sezione 2 viene da GCAM, un modello pubblico tarato su dati reali. Le altre sezioni vengono da un nostro modello più semplice, che aggiunge ciò che GCAM non simula: lavoro, disuguaglianza, tensioni tra paesi.</p></div>
+   <div><b>Cosa è solido</b><p>I risultati di GCAM e il punto di partenza: i prezzi di oggi, il peso delle reti in bolletta, quanto crescono i consumi quando i prezzi scendono.</p></div>
+   <div><b>Cosa è ipotesi</b><p>Le soglie della sezione 3 sono stime di massima. Gli effetti su lavoro, disuguaglianza e politica sono ipotesi ragionevoli, non misure: servono a capire quali scelte cambiano il risultato.</p></div>
+   <div><b>Prossimi passi</b><p>Completare gli scenari che mancano, verificare le soglie una per una e simulare in GCAM la fusione come tecnologia a sé, invece del nucleare a costo ridotto.</p></div>
   </div>
   <p style="margin-top:24px"><a class="torna" href="../index.html">← Torna alle domande</a></p>
  </div>
@@ -220,13 +221,13 @@ const it=(n,d)=>n.toFixed(d).replace('.',',');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const FATTORI=[3,10,30,100];
 const LEVE=[
- ['velocita','Quanto in fretta arriva?',8,50,1,v=>`a metà nel ${2030+Math.round(v)}`,'Anni perché il nuovo prezzo arrivi a metà strada nel mondo.','in fretta','lentamente'],
+ ['velocita','Quanto in fretta arriva?',8,50,1,v=>`a metà nel ${2030+Math.round(v)}`,'In quanti anni il nuovo prezzo arriva a metà del mondo.','in fretta','lentamente'],
  ['controllo','Chi controlla impianti e reti?',0,1,0.05,v=>v<0.34?'bene comune':v<0.67?'misto':'pochi padroni','Diffusi e pubblici, oppure in mano a poche aziende o stati.','bene comune','pochi padroni'],
- ['redistribuzione','Chi riceve i guadagni?',0,1,0.05,v=>v<0.34?'chi possiede':v<0.67?'in parte tutti':'tutti','Quanto le istituzioni trasformano i guadagni in redditi, servizi e tempo.','chi possiede','tutti'],
- ['ai','Quanto diventa automazione?',0,1,0.05,v=>v<0.34?'poco':v<0.67?'molto':'quasi tutto','Quanta energia diventa calcolo e intelligenza artificiale che sostituisce lavoro.','poco','quasi tutto'],
- ['ambiente','Mettiamo limiti al consumo?',0,1,0.05,v=>v<0.34?'nessun limite':v<0.67?'alcuni':'forti','Regole su suolo, materiali, calore e natura, contro l\'effetto rimbalzo.','nessuno','forti'],
+ ['redistribuzione','Chi riceve i guadagni?',0,1,0.05,v=>v<0.34?'chi possiede':v<0.67?'in parte tutti':'tutti','Quanto i guadagni diventano redditi, servizi e tempo libero per tutti.','chi possiede','tutti'],
+ ['ai','Quanto diventa automazione?',0,1,0.05,v=>v<0.34?'poco':v<0.67?'molto':'quasi tutto','Quanta energia va a computer e intelligenza artificiale che sostituiscono lavoro.','poco','quasi tutto'],
+ ['ambiente','Mettiamo limiti al consumo?',0,1,0.05,v=>v<0.34?'nessun limite':v<0.67?'alcuni':'forti','Regole su suolo, materiali e natura, perché l\'energia economica non faccia consumare tutto.','nessuno','forti'],
  ['petrostati','Accompagniamo i petrostati?',0,1,0.05,v=>v<0.34?'lasciati soli':v<0.67?'in parte':'fondo comune','Un piano internazionale per i paesi che vivono di petrolio e gas.','lasciati soli','fondo comune'],
- ['materiali','I limiti fisici contano ancora?',0,1,0.05,v=>v<0.34?'poco':v<0.67?'abbastanza':'molto','Minerali e suolo restano un vincolo, o con energia economica si ricicla tutto?','poco','molto']];
+ ['materiali','I limiti fisici contano ancora?',0,1,0.05,v=>v<0.34?'poco':v<0.67?'abbastanza':'molto','Minerali e terreni restano un limite, o con energia economica si ricicla tutto?','poco','molto']];
 const PRESET=[
  ['Oggi, proiettato',{}],
  ['Bene comune',{controllo:0.1,redistribuzione:0.8,ambiente:0.7,petrostati:0.7}],
@@ -234,24 +235,23 @@ const PRESET=[
  ['Corsa senza regole',{ambiente:0.05,velocita:12,materiali:0.8}],
  ['Automazione senza rete',{ai:0.95,redistribuzione:0.1,controllo:0.3}]];
 const AR={
- pocodiverso:['Più ricchi, stesso mondo','#4d4f52','L\'energia costa meno e l\'economia ne beneficia, ma non abbastanza da cambiare la struttura del mondo: stesse industrie, stessi equilibri, qualche margine in più.'],
- condivisa:['Abbondanza condivisa','#454b2b','Energia a basso costo per quasi tutti e guadagni distribuiti. La disuguaglianza scende, il lavoro cambia senza crollare.'],
- tempo:['La società del tempo liberato','#454b2b','L\'automazione toglie molto lavoro, ma i guadagni sono redistribuiti: il lavoro perso diventa tempo. La domanda centrale non è più come produrre, ma come vivere.'],
- diseguale:['Abbondanza diseguale','#b0401a','Il mondo è molto più ricco ma i guadagni vanno soprattutto a chi possiede impianti, reti, calcolo e terra. Si vive meglio in media, con divari che crescono.'],
- feudale:['Feudalesimo energetico','#973312','Pochi controllano energia e calcolo e ne decidono l\'accesso. Una rendita enorme e concentrata: chi è dentro vive nell\'abbondanza, chi è fuori dipende da loro.'],
- senzalavoro:['Abbondanza senza lavoro','#973312','L\'energia diventa automazione e il lavoro scompare più in fretta di quanto le istituzioni redistribuiscano. Ricchezza in crescita, disoccupazione di massa.'],
- jevons:['Il pianeta come nuovo limite','#b0401a','L\'energia a basso costo fa esplodere i consumi. Suolo, materiali, calore e natura diventano il nuovo collo di bottiglia.'],
- meta:['Due mondi','#4d4f52','Nel 2080 una parte grande dell\'umanità non ha ancora accesso all\'energia a basso costo. Convivono un mondo dell\'abbondanza e uno che vive come oggi.']};
-const VIA={ordinato:['Transizione ordinata','Il passaggio è gestito: la tensione geopolitica resta contenuta.'],teso:['Transizione tesa','Il passaggio crea attriti, con crisi nei paesi produttori ma senza rotture gravi.'],turbolento:['Transizione turbolenta','Il passaggio è violento: il crollo dei petrostati e la lotta per il controllo dell\'energia portano la tensione a livelli di crisi intorno al ']};
+ pocodiverso:['Più ricchi, stesso mondo','#4d4f52','L\'energia costa meno e l\'economia ne guadagna, ma non abbastanza da cambiare il mondo: stesse industrie, stessi equilibri, un po\' di margine in più.'],
+ condivisa:['Abbondanza condivisa','#454b2b','Energia economica per quasi tutti e guadagni distribuiti. Le disuguaglianze scendono e il lavoro cambia senza crollare.'],
+ tempo:['La società del tempo liberato','#454b2b','Le macchine fanno gran parte del lavoro di oggi, ma i guadagni vengono distribuiti: il lavoro perso diventa tempo libero. La domanda non è più come produrre, ma come vivere.'],
+ diseguale:['Abbondanza diseguale','#b0401a','Il mondo è molto più ricco, ma i guadagni vanno soprattutto a chi possiede impianti, reti, computer e terreni. In media si vive meglio, e le distanze tra ricchi e poveri crescono.'],
+ feudale:['Feudalesimo energetico','#973312','Pochi controllano energia e calcolo e decidono chi può usarli. Chi sta dentro vive nell\'abbondanza, chi sta fuori dipende da loro.'],
+ senzalavoro:['Abbondanza senza lavoro','#973312','L\'energia economica alimenta macchine che sostituiscono il lavoro, più in fretta di quanto lo Stato riesca a redistribuire. Più ricchezza, e molta più disoccupazione.'],
+ jevons:['Il pianeta come nuovo limite','#b0401a','L\'energia economica fa crescere i consumi di tutto. Il limite diventa il pianeta: suolo, materiali, calore, natura.'],
+ meta:['Due mondi','#4d4f52','Nel 2080 una parte grande dell\'umanità non ha ancora energia a basso costo. Convivono due mondi: uno nell\'abbondanza, uno come oggi.']};
+const VIA={ordinato:['Transizione ordinata','Il passaggio è gestito: le tensioni tra paesi restano contenute.'],teso:['Transizione tesa','Il passaggio crea attriti: i paesi che vivono di petrolio entrano in crisi, ma senza rotture gravi.'],turbolento:['Transizione turbolenta','Il passaggio è violento: i paesi del petrolio crollano e si lotta per il controllo dell\'energia. Le tensioni toccano il massimo intorno al ']};
 const TI=[
  ['accesso','Accesso all\'energia a basso costo',v=>Math.round(v*100)+'%','della popolazione',0,1],
  ['pil','Ricchezza prodotta',v=>it(v,1)+'×','rispetto a oggi',null,null],
- ['disuguaglianza','Disuguaglianza',v=>it(v,2),'oggi 0,38',0.2,0.8],
+ ['disuguaglianza','Disuguaglianza (indice di Gini)',v=>it(v,2),'oggi 0,38',0.2,0.8],
  ['disoccupazione','Disoccupazione da automazione',v=>Math.round(v*100)+'%','dei lavoratori',0,0.6],
  ['tempo','Lavoro diventato tempo libero',v=>Math.round(v*100)+'%','del lavoro di oggi',0,0.6],
- ['riscaldamento','Riscaldamento globale',v=>it(v,1)+' °C','oggi circa 1,4 °C',1,2.6],
- ['pressione','Pressione su suolo e materiali',v=>it(v,2),'oggi 0,40',0,1],
- ['tensione','Tensione geopolitica',v=>it(v,2),'picco nel periodo',0,1]];
+ ['pressione','Pressione su suolo e materiali',v=>it(v,2),'da 0 a 1, oggi 0,40',0,1],
+ ['tensione','Tensioni tra paesi',v=>it(v,2),'il massimo nel periodo, da 0 a 1',0,1]];
 
 document.getElementById('fattori').innerHTML=FATTORI.map(f=>`<button class="btn" data-f="${f}" aria-pressed="${f===P.riduzione}">${f} volte meno</button>`).join('');
 document.getElementById('fattori').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;P.riduzione=+b.dataset.f;render()});
@@ -271,12 +271,12 @@ function render(){
  document.title=`Se l'energia costa ${P.riduzione} volte meno · Modelli futuribili`;
  document.getElementById('sommario').innerHTML=[
   [Math.round((1-pr.famiglie)*100)+'%','in meno sulla bolletta di casa'],
-  ['~'+Math.round(pr.industriaEuro)+' €/MWh','prezzo per l\'industria (oggi ~100)'],
-  [m.sbloccate.length+' su '+SOGLIE.length,'attività che diventano convenienti'],
-  [AR[m.arch][0],'il mondo nel 2080, con le scelte di oggi']].map(([a,b])=>`<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('');
+  ['~'+Math.round(pr.industriaEuro)+' €','prezzo dell\'energia per l\'industria, per megawattora (oggi circa 100)'],
+  [m.sbloccate.length+' su '+SOGLIE.length,'produzioni nuove che diventano convenienti'],
+  [AR[m.arch][0],'il mondo nel 2080 (sezione 4)']].map(([a,b])=>`<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('');
  // bolletta
  const rowB=(lab,prod,rete)=>{const tot=prod+rete;return `<div class="riga-b"><span class="piccolo">${lab}<br><span class="secondario">${Math.round(tot*100)} su 100</span></span><div class="barra" role="img" aria-label="${lab}: produzione ${Math.round(prod*100)}, reti ${Math.round(rete*100)}"><i class="prod" style="width:${prod*100}%">${prod>0.12?'produzione':''}</i><i class="rete" style="width:${rete*100}%">${rete>0.12?'reti e oneri':''}</i></div></div>`};
- document.getElementById('bolletta').innerHTML=`<span class="etichetta">Bolletta di casa, oggi = 100</span>`+rowB('Oggi',0.5,0.5)+rowB(`Con energia ${P.riduzione} volte meno`,0.5/P.riduzione,0.5/P.reti)+`<div class="leg"><span><i style="background:var(--color-terracotta-scuro)"></i>produzione</span><span><i style="background:var(--color-oliva)"></i>reti, accumuli, oneri</span></div><p class="piccolo secondario" style="margin:0">Ripartizione indicativa: in Italia la quota delle reti e degli oneri varia molto tra famiglie e imprese.</p>`;
+ document.getElementById('bolletta').innerHTML=`<span class="etichetta">Bolletta di casa, oggi = 100</span>`+rowB('Oggi',0.5,0.5)+rowB(`Con energia ${P.riduzione} volte meno`,0.5/P.riduzione,0.5/P.reti)+`<div class="leg"><span><i style="background:var(--color-terracotta-scuro)"></i>produzione</span><span><i style="background:var(--color-oliva)"></i>reti, accumuli, oneri</span></div><p class="piccolo secondario" style="margin:0">Divisione indicativa: in Italia il peso di reti e oneri cambia molto tra famiglie e imprese.</p>`;
  // scala
  const eur=pr.industriaEuro;let h='',done=false;
  const steps=[{nome:'Oggi',soglia:100,oggi:1}].concat(SOGLIE.filter(s=>s.soglia<100)).sort((a,b)=>b.soglia-a.soglia);
@@ -284,7 +284,7 @@ function render(){
  for(const s of steps){
   if(!done&&eur>s.soglia){h+=`<div class="qui"><span>${Math.round(eur)} €</span></div>`;done=true}
   if(s.oggi){h+=`<div class="gradino ok"><span class="eur">100</span><span class="pal"></span><div><b>Prezzo di oggi per l'industria</b><p>ordine di grandezza all'ingrosso in Italia, in €/MWh</p></div></div>`;continue}
-  const ok=eur<=s.soglia;h+=`<div class="gradino ${ok?'ok':''}"><span class="eur">sotto ${s.soglia}</span><span class="pal"></span><div><b>${esc(s.nome)}</b><span class="stato">${ok?'sbloccata':'non ancora'}</span><p>${esc(s.nota)}</p></div></div>`;
+  const ok=eur<=s.soglia;h+=`<div class="gradino ${ok?'ok':''}"><span class="eur">sotto ${s.soglia}</span><span class="pal"></span><div><b>${esc(s.nome)}</b><span class="stato">${ok?'conviene':'non ancora'}</span><p>${esc(s.nota)}</p></div></div>`;
  }
  if(!done)h+=`<div class="qui"><span>${Math.round(eur)} €</span></div>`;
  document.getElementById('scala').innerHTML=h;
@@ -294,7 +294,7 @@ function render(){
  const v=VIA[m.viaggio];document.getElementById('mtag').textContent=v[0];
  const pk=m.anni[m.k.tensione.indexOf(Math.max(...m.k.tensione))];
  const top=m.scarsita.slice().sort((x,y)=>y[1]-x[1]).slice(0,2).map(x=>x[0].toLowerCase());
- document.getElementById('mstoria').textContent=`${a[1]?a[2]:''} A quella data il ${Math.round(m.fin.acc*100)}% della popolazione mondiale ha accesso a energia a basso costo e il mondo produce ${it(m.k.pil[50],1)} volte la ricchezza di oggi; il riscaldamento si ferma a ${it(m.fin.warm,1)} °C. ${v[1]}${m.viaggio==='turbolento'?pk+'.':''} Le due cose che diventano più contese: ${top[0]} e, subito dopo, ${top[1]}.`;
+ document.getElementById('mstoria').textContent=`${a[2]} A quella data ${art(Math.round(m.fin.acc*100))}% delle persone ha energia a basso costo e il mondo produce ${it(m.k.pil[50],1)} volte la ricchezza di oggi. ${v[1]}${m.viaggio==='turbolento'?pk+'.':''} Diventano più contesi soprattutto due beni: ${top[0]}, poi ${top[1]}.`;
  document.getElementById('tiles').innerHTML=TI.map(([k,n,fm,sub])=>{const s=m.k[k];const val=k==='tensione'?Math.max(...s):s[50];return `<div class="tile"><div class="n">${n}</div><div class="v">${esc(fm(val))} <small>${sub}</small></div><div class="fig"><svg data-k="${k}" aria-hidden="true"></svg></div></div>`}).join('');
  drawTiles();
  renderGcam();
@@ -312,6 +312,8 @@ function drawTiles(){if(!last)return;const c=getComputedStyle(document.getElemen
 // ---- Risultati GCAM ----
 const COL={'Nuova fonte e nucleare':'#e05a26','Solare':'#faa27f','Eolico':'#d6d0c3','Idroelettrico':'#8a8475','Geotermico':'#fae6db','Biomasse':'#c9c3b5','Gas':'#4d4f52','Petrolio':'#973312','Carbone':'#1c1c1c'};
 const ORD=['Nuova fonte e nucleare','Solare','Eolico','Idroelettrico','Geotermico','Biomasse','Gas','Petrolio','Carbone'];
+const art=n=>(/^(8|11)/.test(String(n))&&!/^(1[0-9]{2}|8[0-9]{2})$/.test(String(n))&&String(n).length<=2?"l'":'il ')+n;
+const artA=n=>(/^(8|11)/.test(String(n))&&String(n).length<=2?"all'":'al ')+n;
 const pc=(a,b)=>{const v=(a/b-1)*100;return (v>0?'+':'')+Math.round(v)+'%'};
 let gS=null;
 function renderGcam(){
@@ -319,36 +321,36 @@ function renderGcam(){
  document.getElementById('gtit').textContent=P.riduzione+' volte meno';
  if(typeof GCAM==='undefined'||!GCAM.scenari['1']){el.innerHTML='<div class="gattesa"><p>Risultati non disponibili.</p></div>';return}
  const S=GCAM.scenari[f],B=GCAM.scenari['1'],A=GCAM.anni,i50=A.indexOf(2050),i00=A.indexOf(2100);
- if(!S){gS=null;el.innerHTML=`<div class="gattesa"><span class="etichetta">In calcolo</span><p style="margin-top:8px">Lo scenario a ${P.riduzione} volte meno sta ancora girando: ogni scenario di GCAM richiede circa un'ora. Pronti finora: ${Object.keys(GCAM.scenari).filter(k=>k!=='1').map(k=>k+' volte meno').join(', ')||'solo il riferimento'}.</p></div>`;return}
+ if(!S){gS=null;el.innerHTML=`<div class="gattesa"><span class="etichetta">In calcolo</span><p style="margin-top:8px">Lo scenario a ${P.riduzione} volte meno non è ancora pronto: ogni scenario di GCAM richiede circa un'ora di calcolo. Già pronti: ${Object.keys(GCAM.scenari).filter(k=>k!=='1').map(k=>k+' volte meno').join(', ')||'nessuno'}.</p></div>`;return}
  gS=S;
  const tot=(X,i)=>Object.values(X.generazione).reduce((a,s)=>a+s[i],0);
  const quota=(X,i)=>X.generazione['Nuova fonte e nucleare'][i]/tot(X,i);
  const nums=[
-  [Math.round(quota(S,i50)*100)+'%',`dell'elettricità mondiale dalla nuova fonte nel 2050 (riferimento: ${Math.round(quota(B,i50)*100)}% di nucleare)`],
-  [pc(S.costoIngrosso[i50],B.costoIngrosso[i50]),'costo dell\'elettricità all\'ingrosso nel 2050, rispetto al riferimento'],
-  [pc(S.costoCasa[i50],B.costoCasa[i50]),'costo dell\'elettricità consegnata alle case nel 2050: il pavimento delle reti'],
-  [pc(tot(S,i00),tot(B,i00)),'elettricità prodotta nel 2100: l\'effetto rimbalzo'],
-  [it(S.co2[i00],0)+' Gt',`CO₂ nel 2100 (riferimento ${it(B.co2[i00],0)} Gt)`],
-  ['+'+it(S.temperatura[i00],1)+' °C',`riscaldamento nel 2100 (riferimento +${it(B.temperatura[i00],1)} °C)`],
-  [pc(S.petrolio[i50],B.petrolio[i50]),'petrolio estratto nel mondo nel 2050'],
-  [pc(S.idrogeno[i00]+0.01,B.idrogeno[i00]+0.01),'idrogeno prodotto nel 2100']];
+  [Math.round(quota(S,i50)*100)+'%',`dell'elettricità del mondo viene dalla nuova fonte nel 2050. Senza, il nucleare si ferma ${artA(Math.round(quota(B,i50)*100))}%`],
+  [pc(S.costoIngrosso[i50],B.costoIngrosso[i50]),'il prezzo di produzione dell\'elettricità nel 2050'],
+  [pc(S.costoCasa[i50],B.costoCasa[i50]),'il prezzo dell\'elettricità che arriva nelle case nel 2050: scende meno, per via delle reti'],
+  [pc(tot(S,i00),tot(B,i00)),'l\'elettricità consumata nel 2100: costa meno, se ne usa di più'],
+  [it(S.co2[i00],0)+' Gt',`di CO₂ emessa nel 2100, contro ${it(B.co2[i00],0)} senza la nuova fonte`],
+  ['+'+it(S.temperatura[i00],1)+' °C',`di riscaldamento globale nel 2100, contro +${it(B.temperatura[i00],1)} °C senza la nuova fonte`],
+  [pc(S.petrolio[i50],B.petrolio[i50]),'il petrolio estratto nel mondo nel 2050'],
+  [pc(S.idrogeno[i00]+0.01,B.idrogeno[i00]+0.01),'l\'idrogeno prodotto nel 2100']];
  const righe=Object.entries(GCAM.regioni).filter(([k])=>S.regioni[k]&&B.regioni[k]).map(([k,n])=>{const s=S.regioni[k],b=B.regioni[k];
   const pet=b.petrolio&&b.petrolio[i50]?pc(s.petrolio[i50],b.petrolio[i50]):'–';
   return `<tr><td>${esc(n)}</td><td>${pc(s.ingrosso[i50],b.ingrosso[i50])}</td><td>${pc(s.casa[i50],b.casa[i50])}</td><td>${pc(s.co2[i50],b.co2[i50])}</td><td>${pet}</td></tr>`}).join('');
  const dq=quota(S,i50)-quota(B,i50),dIn=S.costoIngrosso[i50]/B.costoIngrosso[i50]-1,dCa=S.costoCasa[i50]/B.costoCasa[i50]-1,dPe=S.petrolio[i50]/B.petrolio[i50]-1,dT=S.temperatura[i00]-B.temperatura[i00];
  el.innerHTML=`<div class="gnum">${nums.map(([a,b])=>`<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('')}</div>
  <h3 class="titolo-piccolo" style="margin-top:36px">Da dove viene l'elettricità del mondo</h3>
- <p class="secondario piccolo">Produzione per fonte, in exajoule. La linea tratteggiata è il totale dello scenario di riferimento.</p>
+ <p class="secondario piccolo">Elettricità prodotta ogni anno per fonte, in exajoule (oggi il mondo ne produce circa 110). La linea tratteggiata è il totale nel mondo senza la nuova fonte.</p>
  <div class="gfig"><svg id="gsvg" role="img" aria-label="Produzione mondiale di elettricità per fonte, 2025-2100"></svg></div>
  <div class="gleg">${ORD.filter(k=>S.generazione[k]).map(k=>`<span><i style="background:${COL[k]};outline:1px solid #8a8475"></i>${k}</span>`).join('')}</div>
  <div class="glettura">
-  <div><b>Quanto conta davvero</b><p>${dq>0.05?`La nuova fonte prende ${Math.round(dq*100)} punti di elettricità in più del nucleare di oggi entro il 2050, ma la sostituzione richiede decenni: le centrali esistenti restano in funzione finché conviene.`:`Anche a questo prezzo la nuova fonte cresce poco entro il 2050: la sostituzione delle centrali esistenti è lenta.`}</p></div>
-  <div><b>Il pavimento esiste</b><p>Nel 2050 il costo all'ingrosso cambia del ${Math.round(dIn*100)}%, quello per le case del ${Math.round(dCa*100)}%. ${Math.abs(dCa)<Math.abs(dIn)?'Reti e distribuzione attenuano il beneficio: la bolletta scende meno del prezzo di produzione.':'Qui il beneficio arriva quasi tutto anche alle case.'}</p></div>
-  <div><b>Clima e petrolio</b><p>Il riscaldamento nel 2100 cambia di ${dT<0?'':'+'}${it(dT,2)} °C rispetto al riferimento e l'estrazione di petrolio nel 2050 del ${Math.round(dPe*100)}%. ${Math.abs(dT)<0.6?'Meno di quanto si immagini: la nuova fonte sostituisce l\'elettricità, ma trasporti, industria e suolo continuano a emettere, e arriva quando molta CO₂ è già in atmosfera.':'Un taglio netto, che arriva però dopo decenni.'}</p></div>
+  <div><b>${dq>0.05?'Vince, ma lentamente':'Cresce poco'}</b><p>${dq>0.05?`Nel 2050 la nuova fonte produce ${art(Math.round(quota(S,i50)*100))}% dell'elettricità del mondo. Ci arriva in vent'anni, non in cinque: le centrali che esistono già restano accese finché rendono.`:`Anche a questo prezzo, nel 2050 la nuova fonte produce solo ${art(Math.round(quota(S,i50)*100))}% dell'elettricità: le centrali che esistono già restano accese finché rendono.`}</p></div>
+  <div><b>${Math.abs(dCa)<Math.abs(dIn)?'Il pavimento esiste':'Il calo arriva alle case'}</b><p>Nel 2050 il prezzo di produzione scende del ${Math.round(-dIn*100)}%, quello per le case del ${Math.round(-dCa*100)}%. ${Math.abs(dCa)<Math.abs(dIn)?'La differenza la fanno le reti, che costano come prima.':'Qui quasi tutto il calo arriva anche in bolletta.'}</p></div>
+  <div><b>${Math.abs(dT)<0.6?'Il clima migliora poco':'Il clima migliora'}</b><p>Nel 2100 il riscaldamento è più basso di ${it(Math.abs(dT),1)} °C rispetto al mondo senza la nuova fonte. ${Math.abs(dT)<0.6?'Le emissioni dell\'elettricità quasi spariscono, ma trasporti, industria e agricoltura continuano a emettere. E quando la nuova fonte arriva, molta CO₂ è già nell\'aria.':'Il taglio è netto, ma arriva dopo decenni.'} Il petrolio estratto nel 2050 cala del ${Math.round(-dPe*100)}%.</p></div>
  </div>
  <h3 class="titolo-piccolo" style="margin-top:36px">Regione per regione, nel 2050</h3>
- <div style="overflow-x:auto"><table class="gtab"><thead><tr><th>Regione</th><th>Costo all'ingrosso</th><th>Costo per le case</th><th>CO₂</th><th>Petrolio estratto</th></tr></thead><tbody>${righe}</tbody></table></div>
- <p class="piccolo secondario" style="margin-top:12px">Variazioni rispetto allo scenario di riferimento di GCAM 8 (SSP2, nessuna politica climatica aggiuntiva). La nuova fonte è rappresentata dalla tecnologia nucleare "large reactor" con costi ridotti: un segnaposto per la fusione.</p>`;
+ <div style="overflow-x:auto"><table class="gtab"><thead><tr><th>Regione</th><th>Prezzo di produzione</th><th>Prezzo per le case</th><th>CO₂</th><th>Petrolio estratto</th></tr></thead><tbody>${righe}</tbody></table></div>
+ <p class="piccolo secondario" style="margin-top:12px">Differenze rispetto allo stesso mondo senza la nuova fonte. Lo scenario di riferimento di GCAM (versione 9.1) ha popolazione ed economia a metà tra gli scenari dell'IPCC e nessuna nuova politica per il clima. La nuova fonte è simulata con la tecnologia nucleare di GCAM a costi ridotti: fa le veci della fusione.</p>`;
  drawG();
 }
 function drawG(){const s=document.getElementById('gsvg');if(!s||!gS)return;const W=s.clientWidth,H=s.clientHeight;if(!W)return;

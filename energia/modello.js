@@ -19,13 +19,13 @@ const DEFAULT = {
 // Attività che diventano convenienti sotto una certa soglia di prezzo per l'industria (€/MWh).
 // Ordini di grandezza indicativi: da verificare con la letteratura tecnica.
 const SOGLIE = [
-  { nome: 'Data center e calcolo per l\'AI', soglia: 120, nota: 'conviene già oggi: l\'energia pesa, ma non decide' },
-  { nome: 'Alluminio e metalli da elettrolisi', soglia: 40, nota: 'oggi si fanno dove l\'elettricità costa poco, come l\'Islanda' },
+  { nome: 'Data center e calcolo per l\'AI', soglia: 120, nota: 'conviene già oggi: l\'energia pesa, ma non è il costo principale' },
+  { nome: 'Alluminio e metalli da elettrolisi', soglia: 40, nota: 'oggi le fonderie stanno dove l\'elettricità costa poco, come in Islanda' },
   { nome: 'Desalinizzazione per città e agricoltura', soglia: 30, nota: 'acqua dolce a basso costo ovunque ci sia mare' },
-  { nome: 'Idrogeno verde e acciaio senza carbone', soglia: 20, nota: 'l\'idrogeno da elettricità batte quello da gas' },
-  { nome: 'Fertilizzanti da aria e acqua', soglia: 20, nota: 'ammoniaca senza gas naturale' },
+  { nome: 'Idrogeno verde e acciaio senza carbone', soglia: 20, nota: 'fare idrogeno con l\'elettricità costa meno che farlo col gas' },
+  { nome: 'Fertilizzanti da aria e acqua', soglia: 20, nota: 'l\'ammoniaca dei concimi si fa senza gas naturale' },
   { nome: 'Carburanti sintetici per aerei e navi', soglia: 12, nota: 'cherosene fatto con CO₂ e idrogeno' },
-  { nome: 'Cattura della CO₂ dall\'aria su larga scala', soglia: 8, nota: 'serve anche capitale: l\'energia gratis non basta' },
+  { nome: 'Cattura della CO₂ dall\'aria su larga scala', soglia: 8, nota: 'anche gli impianti costano: l\'energia economica da sola non basta' },
   { nome: 'Agricoltura al chiuso per i cereali', soglia: 3, nota: 'la luce artificiale resta carissima rispetto al sole' }
 ];
 
