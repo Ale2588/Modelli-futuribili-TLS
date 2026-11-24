@@ -1,0 +1,59 @@
+/* Modelli futuribili · The Long Shot
+   Stili del sito, costruiti sui token di design/tokens.json (copiati in tokens.css).
+   Registro "sito": acceso, campiture piene di terracotta, oliva e notte. */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap");
+
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:24px}
+body{margin:0;background:var(--color-carta);color:var(--color-inchiostro);font-family:var(--font-sans);font-size:var(--fs-testo);line-height:1.6;overflow-x:clip}
+section,header,footer{background:var(--color-sfondo);color:var(--color-testo)}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--margine-schermo)}
+.band{padding-block:clamp(48px,7vw,96px);position:relative;overflow:hidden}
+p{margin:0 0 16px;max-width:var(--riga-max)}
+a{color:var(--color-accento-testo);text-underline-offset:3px}
+:focus-visible{outline:var(--focus-spessore) solid var(--color-focus);outline-offset:2px}
+
+h1,h2,h3{font-family:var(--font-display);font-weight:400;margin:0;text-wrap:balance}
+h1 em,h2 em,h3 em{color:var(--color-accento);font-style:italic}
+.display{font-size:var(--fs-display);line-height:1;letter-spacing:-.01em}
+.domanda{font-size:var(--fs-titolo-evento);line-height:1.08}
+.titolo{font-size:var(--fs-titolo);line-height:1.15;font-weight:500}
+.titolo-piccolo{font-size:24px;line-height:1.2;font-weight:500}
+.etichetta{font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--color-testo-secondario)}
+.etichetta-grande{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--color-testo-secondario)}
+.testo-grande{font-size:var(--fs-testo-grande);line-height:1.5}
+.secondario{color:var(--color-testo-secondario)}
+.piccolo{font-size:15px;font-weight:500;line-height:1.5}
+[data-theme=notte] p,[data-theme=oliva] p,[data-theme=terracotta] p{font-weight:500}
+
+/* Intestazione e piè di pagina */
+.testata{border-bottom:1px solid var(--color-filetto)}
+.testata .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;padding-block:16px}
+.marchio{display:flex;align-items:baseline;gap:12px;color:var(--color-testo);text-decoration:none;font-family:var(--font-display);font-size:22px;line-height:1}
+.marchio em{color:var(--color-terracotta-chiaro)}
+.marchio small{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-testo-secondario)}
+.testata nav{display:flex;gap:24px;align-items:center;font-size:16px;font-weight:600}
+.testata nav a{color:var(--color-testo);text-decoration:none;padding:10px 0}
+.testata nav a[aria-current=page]{box-shadow:inset 0 -2px 0 var(--color-terracotta)}
+.piede .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:28px}
+
+/* Arco: l'orizzonte tagliato dal bordo, uno per sezione */
+.arco{position:absolute;pointer-events:none;border-radius:50%;border:clamp(14px,1.8vw,22px) solid var(--arco,#262626)}
+
+/* Pulsanti */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--tocco-min);padding:0 20px;border-radius:var(--radius-1);border:1px solid var(--color-bordo);background:transparent;color:var(--color-testo);font:600 16px/1 var(--font-sans);cursor:pointer;text-decoration:none}
+.btn.primario{background:var(--color-azione);color:var(--color-testo-azione);border-color:var(--color-azione)}
+.btn[aria-pressed=true]{background:var(--color-azione);color:var(--color-testo-azione);border-color:var(--color-azione)}
+.chip{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:var(--radius-full);border:1px solid var(--color-bordo);background:transparent;color:var(--color-testo);font:500 15px/1 var(--font-sans);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--color-testo);color:var(--color-sfondo);border-color:var(--color-testo)}
+
+/* Card delle domande */
+.domande{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:24px;margin-top:32px}
+.card-domanda{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:16px;min-height:340px;padding:28px;border-radius:var(--radius-1);text-decoration:none;background:var(--color-sfondo);color:var(--color-testo)}
+.card-domanda h3{font-size:clamp(28px,1.6vw + 20px,40px);line-height:1.1}
+.card-domanda .vai{margin-top:auto;font-weight:600;color:var(--color-testo);display:flex;align-items:center;gap:8px}
+.card-domanda .vai span{border-bottom:2px solid currentColor}
+.card-domanda:hover .vai span{border-color:var(--color-terracotta-chiaro)}
+
+@media(max-width:600px){.testata nav{gap:16px}.marchio small{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}

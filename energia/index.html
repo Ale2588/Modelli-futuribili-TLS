@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Se l'energia costa 100 volte meno · Modelli futuribili</title>
+<meta name="description" content="Cosa succede se l'energia costa 3, 10, 30 o 100 volte meno di oggi? Un modello esplorativo di The Long Shot.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.hero .wrap{display:grid;gap:24px}
+.fattori{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.fattori .btn{min-width:96px;font-size:20px;min-height:56px;border-color:var(--color-lino);color:var(--color-carta)}
+.fattori .btn[aria-pressed=true]{background:var(--color-carta);color:var(--color-terracotta-scuro);border-color:var(--color-carta)}
+.sommario{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:8px}
+.sommario div{background:var(--color-sfondo-rilievo);padding:16px;border-radius:var(--radius-1)}
+.sommario b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(30px,2vw + 18px,44px);line-height:1.05}
+.sommario span{font-size:15px;font-weight:500;color:var(--color-testo-secondario)}
+
+.due{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start;margin-top:28px}
+.bolletta{display:grid;gap:18px}
+.riga-b{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:12px;align-items:center}
+.barra{display:flex;height:44px;border-radius:var(--radius-1);overflow:hidden;background:var(--color-carta-profonda)}
+.barra i{display:flex;align-items:center;justify-content:center;font:500 13px/1 var(--font-mono);letter-spacing:.08em;color:var(--color-carta);white-space:nowrap;overflow:hidden;transition:width .4s}
+.barra .prod{background:var(--color-terracotta-scuro)}.barra .rete{background:var(--color-oliva)}
+.leg{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px;font-weight:500;color:var(--color-grafite)}
+.leg i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+
+.ctrl{margin-bottom:18px}
+.ctrl label{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:16px}
+.ctrl output{font-weight:500;color:var(--color-testo-secondario);text-align:right}
+.ctrl .estremi{display:flex;justify-content:space-between;font-size:15px;font-weight:500;color:var(--color-testo-secondario)}
+.ctrl .aiuto{font-size:15px;font-weight:500;color:var(--color-testo-secondario);line-height:1.45;margin-top:2px}
+input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-terracotta-scuro)}
+[data-theme=notte] input[type=range],[data-theme=oliva] input[type=range]{accent-color:var(--color-terracotta-chiaro)}
+
+.scala{position:relative;margin-top:32px;border-left:2px solid var(--color-fumo);margin-left:6.5em}
+.gradino{position:relative;display:grid;grid-template-columns:minmax(0,1fr);padding:12px 0 12px 28px;border-bottom:1px solid var(--color-fumo)}
+.gradino .eur{position:absolute;left:-6.5em;top:14px;width:5.6em;text-align:right;font:500 14px/1.2 var(--font-mono);letter-spacing:.08em;color:var(--color-sabbia)}
+.gradino .pal{position:absolute;left:-8px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--color-notte);border:2px solid var(--color-fumo)}
+.gradino.ok .pal{background:var(--color-terracotta);border-color:var(--color-terracotta)}
+.gradino b{font-weight:600;font-size:18px}
+.gradino.ok b{color:var(--color-carta)}.gradino:not(.ok) b{color:var(--color-sabbia)}
+.gradino .stato{font:500 12px/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;margin-left:10px;color:var(--color-terracotta-chiaro)}
+.gradino:not(.ok) .stato{color:var(--color-sabbia)}
+.gradino p{margin:4px 0 0;font-size:15px;color:var(--color-sabbia)}
+.qui{position:relative;margin:0 0 0 -6.5em;padding:10px 0;display:flex;align-items:center;gap:12px}
+.qui span{font:600 14px/1.2 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--color-terracotta-chiaro);width:5.6em;text-align:right}
+.qui::after{content:"";flex:1;height:3px;background:var(--color-terracotta)}
+
+.lab{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);gap:clamp(24px,4vw,56px);align-items:start;margin-top:28px}
+.leve{background:var(--color-carta-profonda);padding:24px;border-radius:var(--radius-1)}
+.preset{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.mondo{border-top:8px solid var(--w,var(--color-terracotta));padding-top:20px}
+.mondo h3{font-size:clamp(32px,2.4vw + 20px,52px);line-height:1.05;color:var(--w)}
+.mondo .tag{display:inline-block;margin:10px 0 14px;padding:6px 12px;border:1px solid var(--color-bordo);border-radius:var(--radius-full);font-size:15px;font-weight:600}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:16px}
+.tile{background:var(--color-carta-profonda);padding:12px 14px;border-radius:var(--radius-1)}
+.tile .n{font-size:15px;font-weight:500;color:var(--color-grafite);line-height:1.3}
+.tile .v{font-family:var(--font-display);font-size:28px;line-height:1.1}
+.tile .v small{font:500 15px var(--font-sans);color:var(--color-grafite)}
+.fig{position:relative;height:46px;margin-top:4px}.fig svg{position:absolute;inset:0;width:100%;height:100%}
+
+.sc{display:grid;gap:10px;margin-top:24px;max-width:960px}
+.srow{display:grid;grid-template-columns:13em minmax(0,1fr) 12em;gap:14px;align-items:center;font-weight:500}
+.strack{position:relative;height:26px}
+.strack::before{content:"";position:absolute;left:0;right:0;top:12px;height:2px;background:var(--color-oliva-rilievo)}
+.strack .mid{position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--color-carta)}
+.strack .bar{position:absolute;top:4px;height:18px;border-radius:var(--radius-1);transition:all .4s}
+.srow .lab2{font-size:15px;color:var(--color-sabbia);text-align:right}
+.sasse{display:grid;grid-template-columns:13em minmax(0,1fr) 12em;gap:14px}
+.sasse div{display:flex;justify-content:space-between}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 40px;margin-top:24px}
+.cols div{border-top:1px solid var(--color-filetto);padding-top:14px}
+.cols b{display:block;font-family:var(--font-display);font-weight:500;font-size:24px;line-height:1.2;margin-bottom:6px}
+.cols p{font-size:17px}
+.torna{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+
+@media(max-width:900px){.due,.lab{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.srow,.sasse{grid-template-columns:8em minmax(0,1fr) 6.5em}.srow{font-size:15px}.srow .lab2{font-size:13px}.scala{margin-left:5em}.gradino .eur{left:-5em;width:4.4em;font-size:12px}.qui{margin-left:-5em}.qui span{width:4.4em;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.barra i,.strack .bar{transition:none}}
+</style>
+</head>
+<body>
+<header class="testata" data-theme="notte">
+ <div class="wrap">
+  <a class="marchio" href="../">The Long <em>Shot.</em> <small>Modelli futuribili</small></a>
+  <nav aria-label="Principale"><a href="../">Le domande</a><a href="#come">Come è fatto</a></nav>
+ </div>
+</header>
+
+<main>
+<section class="hero band" data-theme="terracotta">
+ <div class="arco" style="width:620px;height:620px;right:-330px;top:-360px;--arco:var(--color-notte)" aria-hidden="true"></div>
+ <div class="wrap">
+  <span class="etichetta-grande">Domanda 01 · Energia</span>
+  <h1 class="domanda" id="titolo">Cosa succede se l'energia costa <em>10 volte meno?</em></h1>
+  <p class="testo-grande">Non gratis: molto meno cara. Grazie alla fusione o a un'altra fonte, produrre energia costa una frazione di oggi. Scegli quanto meno, poi guarda cosa diventa possibile e che mondo ne esce.</p>
+  <div>
+   <span class="etichetta">Produrre energia costa</span>
+   <div class="fattori" id="fattori" role="group" aria-label="Quante volte meno costa produrre energia"></div>
+  </div>
+  <div class="sommario" id="sommario"></div>
+ </div>
+</section>
+
+<section class="band" data-theme="carta">
+ <div class="wrap">
+  <span class="etichetta-grande">1 · Il prezzo non va a zero</span>
+  <h2 class="titolo" style="margin-top:8px">La bolletta ha un <em>pavimento</em></h2>
+  <div class="due">
+   <div>
+    <p>Oggi in una bolletta di casa circa metà paga l'energia prodotta e metà reti, accumuli, distribuzione e oneri. Anche se produrre diventa quasi gratis, quella seconda metà resta: cavi, trasformatori, batterie e manutenzione costano. Per questo passare da 10 a 100 volte meno cambia poco, se le reti restano care.</p>
+    <p>L'industria paga soprattutto l'energia, meno le reti: per lei il calo è più forte. È il prezzo che decide cosa diventa conveniente produrre.</p>
+    <div class="ctrl" style="margin-top:20px">
+     <label for="c_reti">Anche le reti costano meno?<output id="o_reti"></output></label>
+     <input type="range" id="c_reti" min="1" max="5" step="0.25">
+     <div class="estremi"><span>come oggi</span><span>5 volte meno</span></div>
+    </div>
+   </div>
+   <div class="bolletta" id="bolletta"></div>
+  </div>
+ </div>
+</section>
+
+<section class="band" data-theme="notte">
+ <div class="wrap">
+  <span class="etichetta-grande">2 · Cosa diventa possibile</span>
+  <h2 class="titolo" style="margin-top:8px">Sotto certe soglie, <em>nascono industrie nuove</em></h2>
+  <p class="secondario">Ogni attività qui sotto diventa conveniente quando il prezzo dell'energia per l'industria scende sotto una soglia. La linea arancione è dove arrivi con le scelte fatte sopra; tutto ciò che sta sopra la linea è sbloccato. Le soglie sono ordini di grandezza da verificare, non numeri esatti.</p>
+  <div class="scala" id="scala"></div>
+ </div>
+</section>
+
+<section class="band" data-theme="carta">
+ <div class="wrap">
+  <span class="etichetta-grande">3 · Che mondo ne esce</span>
+  <h2 class="titolo" style="margin-top:8px">L'energia non decide da sola: <em>contano le altre scelte</em></h2>
+  <p>Con lo stesso prezzo dell'energia possono uscire mondi opposti. Dipende da chi controlla impianti e reti, da chi riceve i guadagni, da quanto l'energia diventa automazione. Cambia le risposte e guarda il mondo nel 2080.</p>
+  <div class="lab">
+   <div class="leve"><div class="preset" id="preset" role="group" aria-label="Mondi di esempio"></div><div id="leve"></div></div>
+   <article class="mondo" id="mondo">
+    <span class="etichetta">Il mondo nel 2080</span>
+    <h3 id="mnome"></h3>
+    <span class="tag" id="mtag"></span>
+    <p id="mstoria" style="max-width:none"></p>
+    <div class="tiles" id="tiles"></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="band" data-theme="oliva">
+ <div class="wrap">
+  <span class="etichetta-grande">4 · Dove si sposta la scarsità</span>
+  <h2 class="titolo" style="margin-top:8px">Quando qualcosa costa poco, <em>il valore migra</em></h2>
+  <p>La linea centrale è "come oggi". A sinistra ciò che nel 2080 è più abbondante, a destra ciò che diventa più conteso, in rapporto alla ricchezza che lo insegue.</p>
+  <div class="sasse etichetta"><span></span><div><span>← più abbondante</span><span>più scarso →</span></div><span></span></div>
+  <div class="sc" id="sc"></div>
+ </div>
+</section>
+
+<section class="band" data-theme="carta" id="come">
+ <div class="wrap">
+  <span class="etichetta-grande">Come è fatto</span>
+  <h2 class="titolo" style="margin-top:8px">Un modello esplorativo, <em>con le ipotesi in vista</em></h2>
+  <div class="cols">
+   <div><b>Cosa fa</b><p>Simula il mondo intero anno per anno, dal 2030 al 2080. Il nuovo prezzo arriva con una curva a S; da lì derivano consumi, attività sbloccate, lavoro, disuguaglianza, clima, tensioni geopolitiche.</p></div>
+   <div><b>Cosa è ancorato ai dati</b><p>Il punto di partenza (prezzi di oggi, peso delle reti in bolletta) e la reazione dei consumi al prezzo (elasticità intorno a 0,6). Le soglie delle attività sono ordini di grandezza dalla letteratura tecnica, da verificare una per una.</p></div>
+   <div><b>Cosa è ancora ipotesi</b><p>Gli effetti su lavoro, disuguaglianza e geopolitica sono coefficienti ragionevoli, non stime. Servono a vedere quali scelte separano un mondo dall'altro, non a prevedere quale arriverà.</p></div>
+   <div><b>Il passo successivo</b><p>Stiamo facendo girare GCAM, il modello globale aperto del Pacific Northwest National Laboratory (32 regioni, energia, suolo, acqua, clima), con una nuova fonte a 3, 10, 30 e 100 volte meno. I suoi risultati sostituiranno le ipotesi fisiche di questa pagina.</p></div>
+  </div>
+  <p style="margin-top:24px"><a class="torna" href="../">← Torna alle domande</a></p>
+ </div>
+</section>
+</main>
+
+<footer class="piede" data-theme="notte">
+ <div class="wrap">
+  <span class="etichetta">The Long Shot · Modelli futuribili · Domanda 01</span>
+  <a class="etichetta" href="https://github.com/Ale2588/Modelli-futuribili-TLS">Codice e ipotesi su GitHub</a>
+ </div>
+</footer>
+
+<script src="modello.js"></script>
+<script>
+{
+const P=Object.assign({},DEFAULT);
+const it=(n,d)=>n.toFixed(d).replace('.',',');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const FATTORI=[3,10,30,100];
+const LEVE=[
+ ['velocita','Quanto in fretta arriva?',8,50,1,v=>`a metà nel ${2030+Math.round(v)}`,'Anni perché il nuovo prezzo arrivi a metà strada nel mondo.','in fretta','lentamente'],
+ ['controllo','Chi controlla impianti e reti?',0,1,0.05,v=>v<0.34?'bene comune':v<0.67?'misto':'pochi padroni','Diffusi e pubblici, oppure in mano a poche aziende o stati.','bene comune','pochi padroni'],
+ ['redistribuzione','Chi riceve i guadagni?',0,1,0.05,v=>v<0.34?'chi possiede':v<0.67?'in parte tutti':'tutti','Quanto le istituzioni trasformano i guadagni in redditi, servizi e tempo.','chi possiede','tutti'],
+ ['ai','Quanto diventa automazione?',0,1,0.05,v=>v<0.34?'poco':v<0.67?'molto':'quasi tutto','Quanta energia diventa calcolo e intelligenza artificiale che sostituisce lavoro.','poco','quasi tutto'],
+ ['ambiente','Mettiamo limiti al consumo?',0,1,0.05,v=>v<0.34?'nessun limite':v<0.67?'alcuni':'forti','Regole su suolo, materiali, calore e natura, contro l\'effetto rimbalzo.','nessuno','forti'],
+ ['petrostati','Accompagniamo i petrostati?',0,1,0.05,v=>v<0.34?'lasciati soli':v<0.67?'in parte':'fondo comune','Un piano internazionale per i paesi che vivono di petrolio e gas.','lasciati soli','fondo comune'],
+ ['materiali','I limiti fisici contano ancora?',0,1,0.05,v=>v<0.34?'poco':v<0.67?'abbastanza':'molto','Minerali e suolo restano un vincolo, o con energia economica si ricicla tutto?','poco','molto']];
+const PRESET=[
+ ['Oggi, proiettato',{}],
+ ['Bene comune',{controllo:0.1,redistribuzione:0.8,ambiente:0.7,petrostati:0.7}],
+ ['Pochi padroni',{controllo:0.9,redistribuzione:0.2}],
+ ['Corsa senza regole',{ambiente:0.05,velocita:12,materiali:0.8}],
+ ['Automazione senza rete',{ai:0.95,redistribuzione:0.1,controllo:0.3}]];
+const AR={
+ pocodiverso:['Più ricchi, stesso mondo','#4d4f52','L\'energia costa meno e l\'economia ne beneficia, ma non abbastanza da cambiare la struttura del mondo: stesse industrie, stessi equilibri, qualche margine in più.'],
+ condivisa:['Abbondanza condivisa','#454b2b','Energia a basso costo per quasi tutti e guadagni distribuiti. La disuguaglianza scende, il lavoro cambia senza crollare.'],
+ tempo:['La società del tempo liberato','#454b2b','L\'automazione toglie molto lavoro, ma i guadagni sono redistribuiti: il lavoro perso diventa tempo. La domanda centrale non è più come produrre, ma come vivere.'],
+ diseguale:['Abbondanza diseguale','#b0401a','Il mondo è molto più ricco ma i guadagni vanno soprattutto a chi possiede impianti, reti, calcolo e terra. Si vive meglio in media, con divari che crescono.'],
+ feudale:['Feudalesimo energetico','#973312','Pochi controllano energia e calcolo e ne decidono l\'accesso. Una rendita enorme e concentrata: chi è dentro vive nell\'abbondanza, chi è fuori dipende da loro.'],
+ senzalavoro:['Abbondanza senza lavoro','#973312','L\'energia diventa automazione e il lavoro scompare più in fretta di quanto le istituzioni redistribuiscano. Ricchezza in crescita, disoccupazione di massa.'],
+ jevons:['Il pianeta come nuovo limite','#b0401a','L\'energia a basso costo fa esplodere i consumi. Suolo, materiali, calore e natura diventano il nuovo collo di bottiglia.'],
+ meta:['Due mondi','#4d4f52','Nel 2080 una parte grande dell\'umanità non ha ancora accesso all\'energia a basso costo. Convivono un mondo dell\'abbondanza e uno che vive come oggi.']};
+const VIA={ordinato:['Transizione ordinata','Il passaggio è gestito: la tensione geopolitica resta contenuta.'],teso:['Transizione tesa','Il passaggio crea attriti, con crisi nei paesi produttori ma senza rotture gravi.'],turbolento:['Transizione turbolenta','Il passaggio è violento: il crollo dei petrostati e la lotta per il controllo dell\'energia portano la tensione a livelli di crisi intorno al ']};
+const TI=[
+ ['accesso','Accesso all\'energia a basso costo',v=>Math.round(v*100)+'%','della popolazione',0,1],
+ ['pil','Ricchezza prodotta',v=>it(v,1)+'×','rispetto a oggi',null,null],
+ ['disuguaglianza','Disuguaglianza',v=>it(v,2),'oggi 0,38',0.2,0.8],
+ ['disoccupazione','Disoccupazione da automazione',v=>Math.round(v*100)+'%','dei lavoratori',0,0.6],
+ ['tempo','Lavoro diventato tempo libero',v=>Math.round(v*100)+'%','del lavoro di oggi',0,0.6],
+ ['riscaldamento','Riscaldamento globale',v=>it(v,1)+' °C','oggi circa 1,4 °C',1,2.6],
+ ['pressione','Pressione su suolo e materiali',v=>it(v,2),'oggi 0,40',0,1],
+ ['tensione','Tensione geopolitica',v=>it(v,2),'picco nel periodo',0,1]];
+
+document.getElementById('fattori').innerHTML=FATTORI.map(f=>`<button class="btn" data-f="${f}" aria-pressed="${f===P.riduzione}">${f} volte meno</button>`).join('');
+document.getElementById('fattori').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;P.riduzione=+b.dataset.f;render()});
+document.getElementById('leve').innerHTML=LEVE.map(([k,l,mi,ma,st,,h,a,b])=>`<div class="ctrl"><label for="c_${k}">${l}<output id="o_${k}"></output></label><input type="range" id="c_${k}" min="${mi}" max="${ma}" step="${st}"><div class="estremi"><span>${a}</span><span>${b}</span></div><div class="aiuto">${h}</div></div>`).join('');
+document.getElementById('preset').innerHTML=PRESET.map(([n],i)=>`<button class="chip" data-i="${i}" aria-pressed="${i===0}">${n}</button>`).join('');
+const FMT=Object.fromEntries(LEVE.map(x=>[x[0],x[5]]));FMT.reti=v=>v<=1?'come oggi':`${it(v,v%1?2:0).replace(/,?0+$/,'')} volte meno`;
+function sync(){for(const k of [...LEVE.map(x=>x[0]),'reti']){document.getElementById('c_'+k).value=P[k];document.getElementById('o_'+k).textContent=FMT[k](P[k])}}
+function unpress(){document.querySelectorAll('#preset .chip').forEach(b=>b.setAttribute('aria-pressed','false'))}
+[...LEVE.map(x=>x[0]),'reti'].forEach(k=>{const el=document.getElementById('c_'+k);el.addEventListener('input',()=>{P[k]=+el.value;document.getElementById('o_'+k).textContent=FMT[k](P[k]);if(k!=='reti')unpress();render()})});
+document.getElementById('preset').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;const keep={riduzione:P.riduzione,reti:P.reti};Object.assign(P,DEFAULT,PRESET[+b.dataset.i][1],keep);sync();document.querySelectorAll('#preset .chip').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render()});
+
+let last=null;
+function render(){
+ const m=mondo(P);last=m;const pr=m.prezzi;
+ document.querySelectorAll('#fattori .btn').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.f===P.riduzione)));
+ document.getElementById('titolo').innerHTML=`Cosa succede se l'energia costa <em>${P.riduzione} volte meno?</em>`;
+ document.title=`Se l'energia costa ${P.riduzione} volte meno · Modelli futuribili`;
+ document.getElementById('sommario').innerHTML=[
+  [Math.round((1-pr.famiglie)*100)+'%','in meno sulla bolletta di casa'],
+  ['~'+Math.round(pr.industriaEuro)+' €/MWh','prezzo per l\'industria (oggi ~100)'],
+  [m.sbloccate.length+' su '+SOGLIE.length,'attività che diventano convenienti'],
+  [AR[m.arch][0],'il mondo nel 2080, con le scelte di oggi']].map(([a,b])=>`<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('');
+ // bolletta
+ const rowB=(lab,prod,rete)=>{const tot=prod+rete;return `<div class="riga-b"><span class="piccolo">${lab}<br><span class="secondario">${Math.round(tot*100)} su 100</span></span><div class="barra" role="img" aria-label="${lab}: produzione ${Math.round(prod*100)}, reti ${Math.round(rete*100)}"><i class="prod" style="width:${prod*100}%">${prod>0.12?'produzione':''}</i><i class="rete" style="width:${rete*100}%">${rete>0.12?'reti e oneri':''}</i></div></div>`};
+ document.getElementById('bolletta').innerHTML=`<span class="etichetta">Bolletta di casa, oggi = 100</span>`+rowB('Oggi',0.5,0.5)+rowB(`Con energia ${P.riduzione} volte meno`,0.5/P.riduzione,0.5/P.reti)+`<div class="leg"><span><i style="background:var(--color-terracotta-scuro)"></i>produzione</span><span><i style="background:var(--color-oliva)"></i>reti, accumuli, oneri</span></div><p class="piccolo secondario" style="margin:0">Ripartizione indicativa: in Italia la quota delle reti e degli oneri varia molto tra famiglie e imprese.</p>`;
+ // scala
+ const eur=pr.industriaEuro;let h='',done=false;
+ const steps=[{nome:'Oggi',soglia:100,oggi:1}].concat(SOGLIE.filter(s=>s.soglia<100)).sort((a,b)=>b.soglia-a.soglia);
+ SOGLIE.filter(s=>s.soglia>=100).forEach(s=>{h+=`<div class="gradino ok"><span class="eur">${s.soglia}+</span><span class="pal"></span><div><b>${esc(s.nome)}</b><span class="stato">già oggi</span><p>${esc(s.nota)}</p></div></div>`});
+ for(const s of steps){
+  if(!done&&eur>s.soglia){h+=`<div class="qui"><span>${Math.round(eur)} €</span></div>`;done=true}
+  if(s.oggi){h+=`<div class="gradino ok"><span class="eur">100</span><span class="pal"></span><div><b>Prezzo di oggi per l'industria</b><p>ordine di grandezza all'ingrosso in Italia, in €/MWh</p></div></div>`;continue}
+  const ok=eur<=s.soglia;h+=`<div class="gradino ${ok?'ok':''}"><span class="eur">sotto ${s.soglia}</span><span class="pal"></span><div><b>${esc(s.nome)}</b><span class="stato">${ok?'sbloccata':'non ancora'}</span><p>${esc(s.nota)}</p></div></div>`;
+ }
+ if(!done)h+=`<div class="qui"><span>${Math.round(eur)} €</span></div>`;
+ document.getElementById('scala').innerHTML=h;
+ // mondo
+ const a=AR[m.arch];const mo=document.getElementById('mondo');mo.style.setProperty('--w',a[1]);
+ document.getElementById('mnome').textContent=a[0];
+ const v=VIA[m.viaggio];document.getElementById('mtag').textContent=v[0];
+ const pk=m.anni[m.k.tensione.indexOf(Math.max(...m.k.tensione))];
+ const top=m.scarsita.slice().sort((x,y)=>y[1]-x[1]).slice(0,2).map(x=>x[0].toLowerCase());
+ document.getElementById('mstoria').textContent=`${a[1]?a[2]:''} A quella data il ${Math.round(m.fin.acc*100)}% della popolazione mondiale ha accesso a energia a basso costo e il mondo produce ${it(m.k.pil[50],1)} volte la ricchezza di oggi; il riscaldamento si ferma a ${it(m.fin.warm,1)} °C. ${v[1]}${m.viaggio==='turbolento'?pk+'.':''} Le due cose che diventano più contese: ${top[0]} e, subito dopo, ${top[1]}.`;
+ document.getElementById('tiles').innerHTML=TI.map(([k,n,fm,sub])=>{const s=m.k[k];const val=k==='tensione'?Math.max(...s):s[50];return `<div class="tile"><div class="n">${n}</div><div class="v">${esc(fm(val))} <small>${sub}</small></div><div class="fig"><svg data-k="${k}" aria-hidden="true"></svg></div></div>`}).join('');
+ drawTiles();
+ // scarsità
+ const R=2.2;
+ document.getElementById('sc').innerHTML=m.scarsita.map(([n,val])=>{const lg=Math.max(-1,Math.min(1,Math.log(val)/Math.log(R*R)));const up=lg>0;const left=up?50:50+lg*50,w=Math.abs(lg)*50;
+  const lab=val>=1?`${it(val,1)}× più scarso`:`${it(1/val,1/val>=10?0:1)}× più abbondante`;
+  return `<div class="srow"><span>${n}</span><div class="strack"><div class="bar" style="left:${left}%;width:${Math.max(w,0.8)}%;background:${up?'var(--color-terracotta-chiaro)':'var(--color-carta)'}"></div><div class="mid"></div></div><span class="lab2">${lab}</span></div>`}).join('');
+}
+function drawTiles(){if(!last)return;const c=getComputedStyle(document.getElementById('mondo')).getPropertyValue('--w').trim()||'#b0401a';
+ document.querySelectorAll('#tiles svg').forEach(s=>{const k=s.dataset.k,ti=TI.find(t=>t[0]===k),d=last.k[k],W=s.clientWidth,H=s.clientHeight;if(!W)return;
+  const lo=ti[4]??Math.min(...d),hi=ti[5]??Math.max(...d)*1.05,X=i=>i/(d.length-1)*W,Yv=v=>H-14-(v-lo)/((hi-lo)||1)*(H-18);
+  s.innerHTML=`<polyline points="${d.map((v,i)=>X(i)+','+Yv(v)).join(' ')}" fill="none" stroke="${c}" stroke-width="2"/><text x="0" y="${H-1}" font-size="11" font-family="JetBrains Mono" fill="#4d4f52">2030</text><text x="${W}" y="${H-1}" font-size="11" font-family="JetBrains Mono" fill="#4d4f52" text-anchor="end">2080</text>`;})}
+const ro=new ResizeObserver(drawTiles);ro.observe(document.getElementById('tiles'));
+sync();render();
+}
+</script>
+</body>
+</html>
