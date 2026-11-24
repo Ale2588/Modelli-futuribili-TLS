@@ -147,7 +147,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
  <div class="wrap">
   <span class="etichetta-grande">2 · Cosa dice un modello del mondo reale</span>
   <h2 class="titolo" style="margin-top:8px">Lo abbiamo chiesto a GCAM: <em id="gtit">10 volte meno</em></h2>
-  <p>GCAM è il modello aperto del Pacific Northwest National Laboratory usato dall'IPCC: 32 regioni, energia, suolo, acqua e clima, tarati su dati reali. Gli abbiamo dato una nuova fonte elettrica programmabile e senza emissioni, che tra il 2030 e il 2050 arriva a costare 3, 10, 30 o 100 volte meno di oggi, disponibile ovunque. Qui sotto il confronto con lo scenario di riferimento, senza la nuova fonte.</p>
+  <p>GCAM è il modello aperto del Pacific Northwest National Laboratory, uno di quelli usati per gli scenari dell'IPCC: 32 regioni, energia, suolo, acqua e clima, tarati su dati reali. Gli abbiamo dato una nuova fonte elettrica programmabile e senza emissioni, che tra il 2030 e il 2050 arriva a costare 3, 10, 30 o 100 volte meno di oggi, disponibile ovunque. Qui sotto il confronto con lo scenario di riferimento, senza la nuova fonte.</p>
   <div id="gcorpo"></div>
  </div>
 </section>
@@ -344,7 +344,7 @@ function renderGcam(){
  <div class="glettura">
   <div><b>Quanto conta davvero</b><p>${dq>0.05?`La nuova fonte prende ${Math.round(dq*100)} punti di elettricità in più del nucleare di oggi entro il 2050, ma la sostituzione richiede decenni: le centrali esistenti restano in funzione finché conviene.`:`Anche a questo prezzo la nuova fonte cresce poco entro il 2050: la sostituzione delle centrali esistenti è lenta.`}</p></div>
   <div><b>Il pavimento esiste</b><p>Nel 2050 il costo all'ingrosso cambia del ${Math.round(dIn*100)}%, quello per le case del ${Math.round(dCa*100)}%. ${Math.abs(dCa)<Math.abs(dIn)?'Reti e distribuzione attenuano il beneficio: la bolletta scende meno del prezzo di produzione.':'Qui il beneficio arriva quasi tutto anche alle case.'}</p></div>
-  <div><b>Clima e petrolio</b><p>Il riscaldamento nel 2100 cambia di ${dT<0?'':'+'}${it(dT,2)} °C rispetto al riferimento e l'estrazione di petrolio nel 2050 del ${Math.round(dPe*100)}%. ${Math.abs(dT)<0.3?'La nuova fonte sostituisce soprattutto elettricità: trasporti, industria e suolo continuano a emettere.':'Un taglio netto, che arriva però dopo decenni.'}</p></div>
+  <div><b>Clima e petrolio</b><p>Il riscaldamento nel 2100 cambia di ${dT<0?'':'+'}${it(dT,2)} °C rispetto al riferimento e l'estrazione di petrolio nel 2050 del ${Math.round(dPe*100)}%. ${Math.abs(dT)<0.6?'Meno di quanto si immagini: la nuova fonte sostituisce l\'elettricità, ma trasporti, industria e suolo continuano a emettere, e arriva quando molta CO₂ è già in atmosfera.':'Un taglio netto, che arriva però dopo decenni.'}</p></div>
  </div>
  <h3 class="titolo-piccolo" style="margin-top:36px">Regione per regione, nel 2050</h3>
  <div style="overflow-x:auto"><table class="gtab"><thead><tr><th>Regione</th><th>Costo all'ingrosso</th><th>Costo per le case</th><th>CO₂</th><th>Petrolio estratto</th></tr></thead><tbody>${righe}</tbody></table></div>
