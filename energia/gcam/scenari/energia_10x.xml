@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+<world>
+<global-technology-database>
+<location-info sector-name="electricity" subsector-name="nuclear">
+<pass-through-technology name="large reactor">
+<period year="2025">
+<input-capital name="capital"><capital-overnight>1355.0000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>41.2400</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.66000</OM-var></input-OM-var>
+</period>
+<period year="2030">
+<input-capital name="capital"><capital-overnight>1355.0000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>41.2400</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.66000</OM-var></input-OM-var>
+</period>
+<period year="2035">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>728.7944</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>23.1910</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.37115</OM-var></input-OM-var>
+</period>
+<period year="2040">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>353.8589</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>13.0412</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.20871</OM-var></input-OM-var>
+</period>
+<period year="2045">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>178.1836</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>7.3336</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.11737</OM-var></input-OM-var>
+</period>
+<period year="2050">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>88.4000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.1240</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06600</OM-var></input-OM-var>
+</period>
+<period year="2055">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>87.9000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.1030</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06600</OM-var></input-OM-var>
+</period>
+<period year="2060">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>87.5000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.0830</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06500</OM-var></input-OM-var>
+</period>
+<period year="2065">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>87.1000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.0620</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06500</OM-var></input-OM-var>
+</period>
+<period year="2070">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>86.6000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.0420</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06500</OM-var></input-OM-var>
+</period>
+<period year="2075">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>86.2000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.0220</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06400</OM-var></input-OM-var>
+</period>
+<period year="2080">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>85.8000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>4.0020</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06400</OM-var></input-OM-var>
+</period>
+<period year="2085">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>85.3000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>3.9820</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06400</OM-var></input-OM-var>
+</period>
+<period year="2090">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>84.9000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>3.9620</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06300</OM-var></input-OM-var>
+</period>
+<period year="2095">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>84.5000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>3.9420</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06300</OM-var></input-OM-var>
+</period>
+<period year="2100">
+<share-weight>1</share-weight>
+<input-capital name="capital"><capital-overnight>84.1000</capital-overnight></input-capital>
+<input-OM-fixed name="OM-fixed"><OM-fixed>3.9230</OM-fixed></input-OM-fixed>
+<input-OM-var name="OM-var"><OM-var>0.06300</OM-var></input-OM-var>
+</period>
+</pass-through-technology>
+</location-info>
+<location-info sector-name="elec_large reactor" subsector-name="large reactor">
+<technology name="large reactor (cooling pond)">
+<period year="2025"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2030"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2035"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.59217</efficiency></minicam-energy-input></period>
+<period year="2040"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.05304</efficiency></minicam-energy-input></period>
+<period year="2045"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.87260</efficiency></minicam-energy-input></period>
+<period year="2050"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2055"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2060"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2065"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2070"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2075"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2080"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2085"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2090"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2095"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2100"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+</technology>
+<technology name="large reactor (once through)">
+<period year="2025"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2030"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2035"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.59217</efficiency></minicam-energy-input></period>
+<period year="2040"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.05304</efficiency></minicam-energy-input></period>
+<period year="2045"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.87260</efficiency></minicam-energy-input></period>
+<period year="2050"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2055"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2060"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2065"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2070"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2075"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2080"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2085"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2090"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2095"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2100"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+</technology>
+<technology name="large reactor (recirculating)">
+<period year="2025"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2030"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2035"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.59217</efficiency></minicam-energy-input></period>
+<period year="2040"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.05304</efficiency></minicam-energy-input></period>
+<period year="2045"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.87260</efficiency></minicam-energy-input></period>
+<period year="2050"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2055"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2060"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2065"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2070"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2075"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2080"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2085"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2090"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2095"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2100"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+</technology>
+<technology name="large reactor (seawater)">
+<period year="2025"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2030"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.33300</efficiency></minicam-energy-input></period>
+<period year="2035"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>0.59217</efficiency></minicam-energy-input></period>
+<period year="2040"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.05304</efficiency></minicam-energy-input></period>
+<period year="2045"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>1.87260</efficiency></minicam-energy-input></period>
+<period year="2050"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2055"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2060"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2065"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2070"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2075"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2080"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2085"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2090"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2095"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+<period year="2100"><minicam-energy-input name="nuclearFuelGenIII"><efficiency>3.33000</efficiency></minicam-energy-input></period>
+</technology>
+</location-info>
+</global-technology-database>
+<region name="Africa_Eastern"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Africa_Northern"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Africa_Southern"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Africa_Western"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Argentina"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Australia_NZ"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Brazil"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Canada"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Central America and Caribbean"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Central Asia"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="China"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Colombia"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="EU-12"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="EU-15"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Europe_Non_EU"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="European Free Trade Association"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="India"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Indonesia"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Japan"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Mexico"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Middle East"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Pakistan"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Russia"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="South Africa"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="South America_Northern"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="South America_Southern"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="South Asia"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="South Korea"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Southeast Asia"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Taiwan"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="USA"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+<region name="Ukraine"><supplysector name="electricity"><subsector name="nuclear">
+<share-weight year="2035">1</share-weight>
+<share-weight year="2040">1</share-weight>
+<share-weight year="2045">1</share-weight>
+<share-weight year="2050">1</share-weight>
+<share-weight year="2055">1</share-weight>
+<share-weight year="2060">1</share-weight>
+<share-weight year="2065">1</share-weight>
+<share-weight year="2070">1</share-weight>
+<share-weight year="2075">1</share-weight>
+<share-weight year="2080">1</share-weight>
+<share-weight year="2085">1</share-weight>
+<share-weight year="2090">1</share-weight>
+<share-weight year="2095">1</share-weight>
+<share-weight year="2100">1</share-weight>
+</subsector></supplysector></region>
+</world>
+</scenario>

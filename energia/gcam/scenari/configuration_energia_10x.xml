@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Files>
+		<Value name="xmlInputFileName">/home/claude/jgcri/gcam-core/input/gcamdata/xml/modeltime.xml</Value>
+		<Value name="BatchFileName">batch_ag.xml</Value>
+		<Value name="policy-target-file">/home/claude/jgcri/gcam-core/input/policy/forcing_target_4p5.xml</Value>
+		<Value name="GHGInputFileName">/home/claude/jgcri/gcam-core/input/magicc/inputs/input_gases.emk</Value>
+		<Value write-output="1" append-scenario-name="0" name="xmldb-location">../output/database_basexdb</Value>
+		<Value write-output="1" append-scenario-name="0" name="restart">./restart/restart</Value>
+		<Value write-output="0" append-scenario-name="1" name="xmlDebugFileName">debug.xml</Value>
+		<Value write-output="1" append-scenario-name="0" name="hector-output">../output/gcam-hector-outputstream.csv</Value>
+		<Value write-output="1" append-scenario-name="1" name="costCurvesOutputFileName">cost_curves.xml</Value>
+		<Value write-output="0" append-scenario-name="0" name="supplyDemandOutputFileName">SDCurves.csv</Value>
+		<Value write-output="0" append-scenario-name="0" name="flow-graph">gcam-flow-graph.dot</Value>
+		<Value write-output="0" append-scenario-name="0" name="dependencyGraphName">DependencyGraph.dot</Value>
+		<Value write-output="0" append-scenario-name="0" name="landAllocatorGraphName">LandAllocatorGraph.dot</Value>
+	</Files>
+	<ScenarioComponents>
+        <Value name = "climate">/home/claude/jgcri/gcam-core/input/gcamdata/xml/hector.xml</Value>
+		<Value name = "socioeconomics">/home/claude/jgcri/gcam-core/input/gcamdata/xml/socioeconomics_CORE.xml</Value>
+		<Value name = "socioeconomics_income_elas">/home/claude/jgcri/gcam-core/input/gcamdata/xml/socioeconomics_incelas_ssp2.xml</Value> 
+		<Value name = "resources">/home/claude/jgcri/gcam-core/input/gcamdata/xml/resources.xml</Value>
+		<Value name = "energy_supply">/home/claude/jgcri/gcam-core/input/gcamdata/xml/en_supply.xml</Value>
+		<Value name = "energy_transformation">/home/claude/jgcri/gcam-core/input/gcamdata/xml/en_transformation.xml</Value>
+		<Value name = "elec_water_base">/home/claude/jgcri/gcam-core/input/gcamdata/xml/electricity_water.xml</Value>
+		<Value name = "heat">/home/claude/jgcri/gcam-core/input/gcamdata/xml/heat.xml</Value>
+		<Value name = "hydrogen">/home/claude/jgcri/gcam-core/input/gcamdata/xml/hydrogen.xml</Value>
+		<Value name = "energy_distribution">/home/claude/jgcri/gcam-core/input/gcamdata/xml/en_distribution.xml</Value>
+		<Value name = "other_industry">/home/claude/jgcri/gcam-core/input/gcamdata/xml/other_industry.xml</Value>
+ 		<Value name = "iron_steel">/home/claude/jgcri/gcam-core/input/gcamdata/xml/iron_steel.xml</Value>
+        <Value name = "iron_steel trade">/home/claude/jgcri/gcam-core/input/gcamdata/xml/iron_steel_trade.xml</Value>
+ 		<Value name = "Off_road">/home/claude/jgcri/gcam-core/input/gcamdata/xml/Off_road.xml</Value>
+ 		<Value name = "chemical">/home/claude/jgcri/gcam-core/input/gcamdata/xml/chemical.xml</Value>
+ 		<Value name = "aluminum">/home/claude/jgcri/gcam-core/input/gcamdata/xml/aluminum.xml</Value>
+ 		<Value name = "paper">/home/claude/jgcri/gcam-core/input/gcamdata/xml/paper.xml</Value>
+		<Value name = "food_processing">/home/claude/jgcri/gcam-core/input/gcamdata/xml/food_processing.xml</Value>
+		<Value name = "cement">/home/claude/jgcri/gcam-core/input/gcamdata/xml/cement.xml</Value>
+		<Value name = "fertilizer_energy">/home/claude/jgcri/gcam-core/input/gcamdata/xml/en_Fert.xml</Value>
+		<Value name = "hddcdd">/home/claude/jgcri/gcam-core/input/gcamdata/xml/HDDCDD_constdd_no_GCM.xml</Value>
+		<Value name = "building">/home/claude/jgcri/gcam-core/input/gcamdata/xml/building_det.xml</Value>
+		<Value name = "transportation">/home/claude/jgcri/gcam-core/input/gcamdata/xml/transportation_UCD_CORE.xml</Value>
+		<Value name = "carbon_content">/home/claude/jgcri/gcam-core/input/gcamdata/xml/Ccoef.xml</Value>
+		<Value name = "carbon_storage">/home/claude/jgcri/gcam-core/input/gcamdata/xml/Cstorage.xml</Value>
+		<Value name = "wind_update">/home/claude/jgcri/gcam-core/input/gcamdata/xml/onshore_wind.xml</Value>
+
+		<Value name = "ag_base">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_For_Past_bio_base_IRR_MGMT.xml</Value>
+		<Value name = "ag_cost">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_cost_IRR_MGMT.xml</Value>
+		<Value name = "ag_prodchange">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_land_prodchange_ref_IRR_MGMT.xml</Value>
+		<Value name = "residue_bio">/home/claude/jgcri/gcam-core/input/gcamdata/xml/resbio_input_IRR_MGMT.xml</Value>
+		<Value name = "animal_input">/home/claude/jgcri/gcam-core/input/gcamdata/xml/an_input.xml</Value>
+		<Value name = "aginput_VA">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_input_laborcapital_IRR_MGMT.xml</Value>
+		<Value name = "aginput_fert">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_input_fert_MGMT.xml</Value>
+		<Value name = "aginput_water">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_input_water_IRR_MGMT.xml</Value>
+		<Value name = "land1">/home/claude/jgcri/gcam-core/input/gcamdata/xml/land_input_1.xml</Value>
+		<Value name = "land2">/home/claude/jgcri/gcam-core/input/gcamdata/xml/land_input_2.xml</Value>
+		<Value name = "land3">/home/claude/jgcri/gcam-core/input/gcamdata/xml/land_input_3_IRR.xml</Value>
+		<Value name = "land4">/home/claude/jgcri/gcam-core/input/gcamdata/xml/land_input_4_IRR_MGMT.xml</Value>
+		<Value name = "land5">/home/claude/jgcri/gcam-core/input/gcamdata/xml/land_input_5_IRR_MGMT.xml</Value>
+		<Value name = "protected_land2">/home/claude/jgcri/gcam-core/input/gcamdata/xml/protected_land_input_2.xml</Value>
+		<Value name = "protected_land3">/home/claude/jgcri/gcam-core/input/gcamdata/xml/protected_land_input_3.xml</Value>
+		<Value name = "demand">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_an_demand_input.xml</Value>
+		<Value name = "bio_trade">/home/claude/jgcri/gcam-core/input/gcamdata/xml/bio_trade.xml</Value>
+		<Value name = "ag_trade">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_trade.xml</Value>
+		<Value name = "ag_storage">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_storage.xml</Value>
+
+		<Value name = "unlim_supply_water">/home/claude/jgcri/gcam-core/input/gcamdata/xml/unlimited_water_supply.xml</Value>
+		<Value name = "water_supply">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_supply_constrained.xml</Value>
+		<Value name = "water_desal">/home/claude/jgcri/gcam-core/input/gcamdata/xml/desalination.xml</Value>
+		<Value name = "water_td">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_td.xml</Value>
+		<Value name = "efw_coefs">/home/claude/jgcri/gcam-core/input/gcamdata/xml/EFW_input_coefs.xml</Value>
+		<Value name = "efw_irr">/home/claude/jgcri/gcam-core/input/gcamdata/xml/EFW_irrigation.xml</Value>
+		<Value name = "efw_mfg">/home/claude/jgcri/gcam-core/input/gcamdata/xml/EFW_manufacturing.xml</Value>
+		<Value name = "efw_muni">/home/claude/jgcri/gcam-core/input/gcamdata/xml/EFW_municipal.xml</Value>
+		<Value name = "elec_water_coef">/home/claude/jgcri/gcam-core/input/gcamdata/xml/electricity_water_coefs.xml</Value>
+		<Value name = "ind_water">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_demand_industry.xml</Value>
+		<Value name = "an_water">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_demand_livestock.xml</Value>
+		<Value name = "municipal_water">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_demand_municipal.xml</Value>
+		<Value name = "primary_ene_water">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_demand_primary.xml</Value>
+
+		<Value name = "ind_urb_proc">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ind_urb_processing_sectors.xml</Value>
+		<Value name = "nonco2_energy">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_energy_emissions.xml</Value>
+		<Value name = "nonco2_fgas">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_fgas_emissions.xml</Value>
+		<Value name = "nonco2_unmgd">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_unmgd_emissions.xml</Value>
+		<Value name = "nonco2_aglu">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_aglu_emissions_IRR_MGMT.xml</Value>
+		<Value name = "nonco2_aglu_prot">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_protected_unmgd_emissions.xml</Value>
+		<Value name = "nonco2_em_controls">/home/claude/jgcri/gcam-core/input/gcamdata/xml/emission_factor_controls.xml</Value>
+		<Value name = "nonco2_TradBio">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ssp2_emissions_factors_tradBio.xml</Value> 
+		
+		<!-- Global nonCO2 GHG MAC files -->
+		<Value name = "nonco2_energy">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_energy_emissions_MAC.xml</Value>
+		<Value name = "nonco2_fgas">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_fgas_emissions_MAC.xml</Value>
+		<Value name = "nonco2_aglu">/home/claude/jgcri/gcam-core/input/gcamdata/xml/all_aglu_emissions_IRR_MGMT_MAC.xml</Value> 
+		<Value name = "nonco2_proc">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ind_urb_processing_sectors_MAC.xml</Value> 
+
+		<!-- Macro KLEAM -->
+		<Value name = "macro">/home/claude/jgcri/gcam-core/input/gcamdata/xml/socioeconomics_macro.xml</Value>
+		<Value name = "capital_Ag">/home/claude/jgcri/gcam-core/input/gcamdata/xml/ag_capital_tracking.xml</Value>
+		
+		<Value name = "bio_feedstock_limit">/home/claude/jgcri/gcam-core/input/gcamdata/xml/liquids_limits.xml</Value>
+		<Value name = "bio_elec_w_feed_limit">/home/claude/jgcri/gcam-core/input/gcamdata/xml/water_elec_liquids_limits.xml</Value>
+		<Value name = "bio_externality">/home/claude/jgcri/gcam-core/input/gcamdata/xml/bio_externality.xml</Value>
+        <Value name = "gas_trade">/home/claude/jgcri/gcam-core/input/gcamdata/xml/gas_trade.xml</Value>
+
+        <Value name = "prune_ag">/home/claude/jgcri/gcam-core/input/gcamdata/xml/prune_empty_ag.xml</Value>
+
+		<Value name = "solver">/home/claude/jgcri/gcam-core/input/solution/cal_broyden_config.xml</Value>
+
+			<Value name = "energia_10x">/home/claude/modelli-futuribili-tls/energia/gcam/scenari/energia_10x.xml</Value>
+	</ScenarioComponents>
+	<Strings>
+		<Value name="scenarioName">energia_10x</Value>
+		<Value name="debug-region">USA</Value>
+		<Value name="AbatedGasForCostCurves">CO2</Value>
+	</Strings>
+	<Bools>
+		<Value name="CalibrationActive">1</Value>
+		<!-- Fixed GDP will calibrate to exogenous path -->
+		<Value name="FixedGDP-Path">1</Value>
+		<Value name="BatchMode">0</Value>
+		<Value name="find-path">0</Value>
+		<Value name="createCostCurve">0</Value>
+		<Value name="debugChecking">0</Value>
+		<Value name="verbose-parse-warnings">0</Value>
+		<Value name="simulActive">1</Value>
+		<Value name="PrintValuesOnGraphs">1</Value>
+		<Value name="ShowNullPaths">0</Value>
+		<Value name="PrintPrices">1</Value>
+		<Value name="QuitFirstFailure">0</Value>
+	</Bools>
+	<Ints>
+		<Value name="numMarketsToFindSD">10</Value>
+		<Value name="numPointsForSD">21</Value>
+		<Value name="numPointsForCO2CostCurve">5</Value>
+		<Value name="carbon-output-start-year">1705</Value>
+		<Value name="stop-period">-1</Value>
+		<Value name="stop-year">-1</Value>
+		<Value name="restart-period">-1</Value>
+		<Value name="restart-year">-1</Value>
+		<Value name="xmldb-buffer-size">100</Value>
+		<Value name="max-parallelism">-1</Value>
+	</Ints>
+	<Doubles>
+	</Doubles>
+</Configuration>

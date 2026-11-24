@@ -77,6 +77,24 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 .cols p{font-size:17px}
 .torna{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
 
+
+.gnum{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:12px;margin-top:24px}
+.gnum div{background:var(--color-sfondo-rilievo);padding:16px;border-radius:var(--radius-1)}
+.gnum b{display:block;font-family:var(--font-display);font-weight:400;font-size:clamp(30px,1.6vw + 20px,42px);line-height:1.05;color:var(--color-carta)}
+.gnum span{font-size:15px;font-weight:500;color:var(--color-sabbia);display:block;line-height:1.4}
+.gfig{position:relative;height:340px;margin-top:28px}.gfig svg{position:absolute;inset:0;width:100%;height:100%}
+.gleg{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:15px;font-weight:500;color:var(--color-sabbia)}
+.gleg i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+.gtab{width:100%;border-collapse:collapse;margin-top:28px;font-size:16px}
+.gtab th,.gtab td{padding:10px 8px;border-bottom:1px solid var(--color-oliva-rilievo);text-align:right;font-weight:500}
+.gtab th:first-child,.gtab td:first-child{text-align:left}
+.gtab th{font:500 12px/1.3 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--color-sabbia)}
+.gattesa{margin-top:24px;padding:24px;border:1px dashed var(--color-sabbia);border-radius:var(--radius-1)}
+.glettura{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px 36px;margin-top:28px}
+.glettura p{font-size:17px}
+.glettura b{display:block;font-family:var(--font-display);font-weight:500;font-size:24px;line-height:1.2;margin-bottom:6px;color:var(--color-carta)}
+@media(max-width:600px){.gtab{font-size:14px}.gtab th,.gtab td{padding:8px 4px}.gfig{height:260px}}
+
 @media(max-width:900px){.due,.lab{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.srow,.sasse{grid-template-columns:8em minmax(0,1fr) 6.5em}.srow{font-size:15px}.srow .lab2{font-size:13px}.scala{margin-left:5em}.gradino .eur{left:-5em;width:4.4em;font-size:12px}.qui{margin-left:-5em}.qui span{width:4.4em;font-size:12px}}
 @media(prefers-reduced-motion:reduce){.barra i,.strack .bar{transition:none}}
@@ -124,9 +142,19 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
  </div>
 </section>
 
+
+<section class="band" data-theme="oliva" id="gcam">
+ <div class="wrap">
+  <span class="etichetta-grande">2 · Cosa dice un modello del mondo reale</span>
+  <h2 class="titolo" style="margin-top:8px">Lo abbiamo chiesto a GCAM: <em id="gtit">10 volte meno</em></h2>
+  <p>GCAM è il modello aperto del Pacific Northwest National Laboratory usato dall'IPCC: 32 regioni, energia, suolo, acqua e clima, tarati su dati reali. Gli abbiamo dato una nuova fonte elettrica programmabile e senza emissioni, che tra il 2030 e il 2050 arriva a costare 3, 10, 30 o 100 volte meno di oggi, disponibile ovunque. Qui sotto il confronto con lo scenario di riferimento, senza la nuova fonte.</p>
+  <div id="gcorpo"></div>
+ </div>
+</section>
+
 <section class="band" data-theme="notte">
  <div class="wrap">
-  <span class="etichetta-grande">2 · Cosa diventa possibile</span>
+  <span class="etichetta-grande">3 · Cosa diventa possibile</span>
   <h2 class="titolo" style="margin-top:8px">Sotto certe soglie, <em>nascono industrie nuove</em></h2>
   <p class="secondario">Ogni attività qui sotto diventa conveniente quando il prezzo dell'energia per l'industria scende sotto una soglia. La linea arancione è dove arrivi con le scelte fatte sopra; tutto ciò che sta sopra la linea è sbloccato. Le soglie sono ordini di grandezza da verificare, non numeri esatti.</p>
   <div class="scala" id="scala"></div>
@@ -135,7 +163,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 
 <section class="band" data-theme="carta">
  <div class="wrap">
-  <span class="etichetta-grande">3 · Che mondo ne esce</span>
+  <span class="etichetta-grande">4 · Che mondo ne esce</span>
   <h2 class="titolo" style="margin-top:8px">L'energia non decide da sola: <em>contano le altre scelte</em></h2>
   <p>Con lo stesso prezzo dell'energia possono uscire mondi opposti. Dipende da chi controlla impianti e reti, da chi riceve i guadagni, da quanto l'energia diventa automazione. Cambia le risposte e guarda il mondo nel 2080.</p>
   <div class="lab">
@@ -153,7 +181,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 
 <section class="band" data-theme="oliva">
  <div class="wrap">
-  <span class="etichetta-grande">4 · Dove si sposta la scarsità</span>
+  <span class="etichetta-grande">5 · Dove si sposta la scarsità</span>
   <h2 class="titolo" style="margin-top:8px">Quando qualcosa costa poco, <em>il valore migra</em></h2>
   <p>La linea centrale è "come oggi". A sinistra ciò che nel 2080 è più abbondante, a destra ciò che diventa più conteso, in rapporto alla ricchezza che lo insegue.</p>
   <div class="sasse etichetta"><span></span><div><span>← più abbondante</span><span>più scarso →</span></div><span></span></div>
@@ -184,6 +212,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 </footer>
 
 <script src="modello.js"></script>
+<script src="gcam-dati.js"></script>
 <script>
 {
 const P=Object.assign({},DEFAULT);
@@ -268,6 +297,7 @@ function render(){
  document.getElementById('mstoria').textContent=`${a[1]?a[2]:''} A quella data il ${Math.round(m.fin.acc*100)}% della popolazione mondiale ha accesso a energia a basso costo e il mondo produce ${it(m.k.pil[50],1)} volte la ricchezza di oggi; il riscaldamento si ferma a ${it(m.fin.warm,1)} °C. ${v[1]}${m.viaggio==='turbolento'?pk+'.':''} Le due cose che diventano più contese: ${top[0]} e, subito dopo, ${top[1]}.`;
  document.getElementById('tiles').innerHTML=TI.map(([k,n,fm,sub])=>{const s=m.k[k];const val=k==='tensione'?Math.max(...s):s[50];return `<div class="tile"><div class="n">${n}</div><div class="v">${esc(fm(val))} <small>${sub}</small></div><div class="fig"><svg data-k="${k}" aria-hidden="true"></svg></div></div>`}).join('');
  drawTiles();
+ renderGcam();
  // scarsità
  const R=2.2;
  document.getElementById('sc').innerHTML=m.scarsita.map(([n,val])=>{const lg=Math.max(-1,Math.min(1,Math.log(val)/Math.log(R*R)));const up=lg>0;const left=up?50:50+lg*50,w=Math.abs(lg)*50;
@@ -278,6 +308,62 @@ function drawTiles(){if(!last)return;const c=getComputedStyle(document.getElemen
  document.querySelectorAll('#tiles svg').forEach(s=>{const k=s.dataset.k,ti=TI.find(t=>t[0]===k),d=last.k[k],W=s.clientWidth,H=s.clientHeight;if(!W)return;
   const lo=ti[4]??Math.min(...d),hi=ti[5]??Math.max(...d)*1.05,X=i=>i/(d.length-1)*W,Yv=v=>H-14-(v-lo)/((hi-lo)||1)*(H-18);
   s.innerHTML=`<polyline points="${d.map((v,i)=>X(i)+','+Yv(v)).join(' ')}" fill="none" stroke="${c}" stroke-width="2"/><text x="0" y="${H-1}" font-size="11" font-family="JetBrains Mono" fill="#4d4f52">2030</text><text x="${W}" y="${H-1}" font-size="11" font-family="JetBrains Mono" fill="#4d4f52" text-anchor="end">2080</text>`;})}
+
+// ---- Risultati GCAM ----
+const COL={'Nuova fonte e nucleare':'#e05a26','Solare':'#faa27f','Eolico':'#d6d0c3','Idroelettrico':'#8a8475','Geotermico':'#fae6db','Biomasse':'#c9c3b5','Gas':'#4d4f52','Petrolio':'#973312','Carbone':'#1c1c1c'};
+const ORD=['Nuova fonte e nucleare','Solare','Eolico','Idroelettrico','Geotermico','Biomasse','Gas','Petrolio','Carbone'];
+const pc=(a,b)=>{const v=(a/b-1)*100;return (v>0?'+':'')+Math.round(v)+'%'};
+let gS=null;
+function renderGcam(){
+ const f=String(P.riduzione),el=document.getElementById('gcorpo');
+ document.getElementById('gtit').textContent=P.riduzione+' volte meno';
+ if(typeof GCAM==='undefined'||!GCAM.scenari['1']){el.innerHTML='<div class="gattesa"><p>Risultati non disponibili.</p></div>';return}
+ const S=GCAM.scenari[f],B=GCAM.scenari['1'],A=GCAM.anni,i50=A.indexOf(2050),i00=A.indexOf(2100);
+ if(!S){gS=null;el.innerHTML=`<div class="gattesa"><span class="etichetta">In calcolo</span><p style="margin-top:8px">Lo scenario a ${P.riduzione} volte meno sta ancora girando: ogni scenario di GCAM richiede circa un'ora. Pronti finora: ${Object.keys(GCAM.scenari).filter(k=>k!=='1').map(k=>k+' volte meno').join(', ')||'solo il riferimento'}.</p></div>`;return}
+ gS=S;
+ const tot=(X,i)=>Object.values(X.generazione).reduce((a,s)=>a+s[i],0);
+ const quota=(X,i)=>X.generazione['Nuova fonte e nucleare'][i]/tot(X,i);
+ const nums=[
+  [Math.round(quota(S,i50)*100)+'%',`dell'elettricità mondiale dalla nuova fonte nel 2050 (riferimento: ${Math.round(quota(B,i50)*100)}% di nucleare)`],
+  [pc(S.costoIngrosso[i50],B.costoIngrosso[i50]),'costo dell\'elettricità all\'ingrosso nel 2050, rispetto al riferimento'],
+  [pc(S.costoCasa[i50],B.costoCasa[i50]),'costo dell\'elettricità consegnata alle case nel 2050: il pavimento delle reti'],
+  [pc(tot(S,i00),tot(B,i00)),'elettricità prodotta nel 2100: l\'effetto rimbalzo'],
+  [it(S.co2[i00],0)+' Gt',`CO₂ nel 2100 (riferimento ${it(B.co2[i00],0)} Gt)`],
+  ['+'+it(S.temperatura[i00],1)+' °C',`riscaldamento nel 2100 (riferimento +${it(B.temperatura[i00],1)} °C)`],
+  [pc(S.petrolio[i50],B.petrolio[i50]),'petrolio estratto nel mondo nel 2050'],
+  [pc(S.idrogeno[i00]+0.01,B.idrogeno[i00]+0.01),'idrogeno prodotto nel 2100']];
+ const righe=Object.entries(GCAM.regioni).filter(([k])=>S.regioni[k]&&B.regioni[k]).map(([k,n])=>{const s=S.regioni[k],b=B.regioni[k];
+  const pet=b.petrolio&&b.petrolio[i50]?pc(s.petrolio[i50],b.petrolio[i50]):'–';
+  return `<tr><td>${esc(n)}</td><td>${pc(s.ingrosso[i50],b.ingrosso[i50])}</td><td>${pc(s.casa[i50],b.casa[i50])}</td><td>${pc(s.co2[i50],b.co2[i50])}</td><td>${pet}</td></tr>`}).join('');
+ const dq=quota(S,i50)-quota(B,i50),dIn=S.costoIngrosso[i50]/B.costoIngrosso[i50]-1,dCa=S.costoCasa[i50]/B.costoCasa[i50]-1,dPe=S.petrolio[i50]/B.petrolio[i50]-1,dT=S.temperatura[i00]-B.temperatura[i00];
+ el.innerHTML=`<div class="gnum">${nums.map(([a,b])=>`<div><b>${esc(a)}</b><span>${esc(b)}</span></div>`).join('')}</div>
+ <h3 class="titolo-piccolo" style="margin-top:36px">Da dove viene l'elettricità del mondo</h3>
+ <p class="secondario piccolo">Produzione per fonte, in exajoule. La linea tratteggiata è il totale dello scenario di riferimento.</p>
+ <div class="gfig"><svg id="gsvg" role="img" aria-label="Produzione mondiale di elettricità per fonte, 2025-2100"></svg></div>
+ <div class="gleg">${ORD.filter(k=>S.generazione[k]).map(k=>`<span><i style="background:${COL[k]};outline:1px solid #8a8475"></i>${k}</span>`).join('')}</div>
+ <div class="glettura">
+  <div><b>Quanto conta davvero</b><p>${dq>0.05?`La nuova fonte prende ${Math.round(dq*100)} punti di elettricità in più del nucleare di oggi entro il 2050, ma la sostituzione richiede decenni: le centrali esistenti restano in funzione finché conviene.`:`Anche a questo prezzo la nuova fonte cresce poco entro il 2050: la sostituzione delle centrali esistenti è lenta.`}</p></div>
+  <div><b>Il pavimento esiste</b><p>Nel 2050 il costo all'ingrosso cambia del ${Math.round(dIn*100)}%, quello per le case del ${Math.round(dCa*100)}%. ${Math.abs(dCa)<Math.abs(dIn)?'Reti e distribuzione attenuano il beneficio: la bolletta scende meno del prezzo di produzione.':'Qui il beneficio arriva quasi tutto anche alle case.'}</p></div>
+  <div><b>Clima e petrolio</b><p>Il riscaldamento nel 2100 cambia di ${dT<0?'':'+'}${it(dT,2)} °C rispetto al riferimento e l'estrazione di petrolio nel 2050 del ${Math.round(dPe*100)}%. ${Math.abs(dT)<0.3?'La nuova fonte sostituisce soprattutto elettricità: trasporti, industria e suolo continuano a emettere.':'Un taglio netto, che arriva però dopo decenni.'}</p></div>
+ </div>
+ <h3 class="titolo-piccolo" style="margin-top:36px">Regione per regione, nel 2050</h3>
+ <div style="overflow-x:auto"><table class="gtab"><thead><tr><th>Regione</th><th>Costo all'ingrosso</th><th>Costo per le case</th><th>CO₂</th><th>Petrolio estratto</th></tr></thead><tbody>${righe}</tbody></table></div>
+ <p class="piccolo secondario" style="margin-top:12px">Variazioni rispetto allo scenario di riferimento di GCAM 8 (SSP2, nessuna politica climatica aggiuntiva). La nuova fonte è rappresentata dalla tecnologia nucleare "large reactor" con costi ridotti: un segnaposto per la fusione.</p>`;
+ drawG();
+}
+function drawG(){const s=document.getElementById('gsvg');if(!s||!gS)return;const W=s.clientWidth,H=s.clientHeight;if(!W)return;
+ const A=GCAM.anni,B=GCAM.scenari['1'],n=A.length,pl=W<520?30:44,pr=8,pt=10,pb=24,iw=W-pl-pr,ih=H-pt-pb;
+ const tot=i=>ORD.reduce((a,k)=>a+((gS.generazione[k]||[])[i]||0),0),totB=i=>Object.values(B.generazione).reduce((a,x)=>a+x[i],0);
+ const mx=Math.max(...A.map((_,i)=>Math.max(tot(i),totB(i))))*1.05;const X=i=>pl+i/(n-1)*iw,Y=v=>pt+ih-v/mx*ih;
+ let base=A.map(()=>0),h='';
+ for(const k of ORD){const d=gS.generazione[k];if(!d)continue;const top=base.map((b,i)=>b+d[i]);
+  h+=`<polygon fill="${COL[k]}" points="${top.map((v,i)=>X(i)+','+Y(v)).join(' ')} ${base.map((v,i)=>[X(i),Y(v)]).reverse().map(p=>p.join(',')).join(' ')}"/>`;base=top}
+ h+=`<polyline fill="none" stroke="#fdfaf5" stroke-width="2" stroke-dasharray="5 4" points="${A.map((_,i)=>X(i)+','+Y(totB(i))).join(' ')}"/>`;
+ const step=mx>400?200:mx>200?100:50;for(let v=0;v<mx;v+=step)h+=`<text x="${pl-6}" y="${Y(v)+4}" text-anchor="end" font-size="12" font-family="JetBrains Mono" fill="#d6d0c3">${v}</text>`;
+ [0,5,10,15].forEach(i=>h+=`<text x="${X(i)}" y="${H-4}" text-anchor="${i===0?'start':i===15?'end':'middle'}" font-size="12" font-family="JetBrains Mono" fill="#d6d0c3">${A[i]}</text>`);
+ s.innerHTML=h}
+const rg=new ResizeObserver(drawG);rg.observe(document.getElementById('gcorpo'));
+
 const ro=new ResizeObserver(drawTiles);ro.observe(document.getElementById('tiles'));
 sync();render();
 }
