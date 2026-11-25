@@ -104,7 +104,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
 <header class="testata" data-theme="notte">
  <div class="wrap">
   <a class="marchio" href="../index.html">The Long <em>Shot.</em> <small>Modelli futuribili</small></a>
-  <nav aria-label="Principale"><a href="../index.html">Le domande</a><a href="#come">Come è fatto</a></nav>
+  <nav aria-label="Principale"><a href="../index.html">Le domande</a><a href="#come">Come è fatto</a><a href="verifica.html">Verifica i calcoli</a></nav>
  </div>
 </header>
 
@@ -120,6 +120,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
    <div class="fattori" id="fattori" role="group" aria-label="Quante volte meno costa produrre energia"></div>
   </div>
   <div class="sommario" id="sommario"></div>
+  <p style="margin:0"><a class="btn" href="verifica.html" style="border-color:var(--color-carta);color:var(--color-carta);text-decoration:none">Verifica i calcoli e le ipotesi →</a></p>
  </div>
 </section>
 
@@ -148,7 +149,7 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
   <span class="etichetta-grande">2 · Cosa dice un modello del mondo reale</span>
   <h2 class="titolo" style="margin-top:8px">La prova con un modello vero: <em id="gtit">10 volte meno</em></h2>
   <p>Fin qui sono ipotesi nostre. Per metterle alla prova abbiamo usato GCAM, un modello pubblico del Pacific Northwest National Laboratory americano, tra quelli usati negli scenari dell'IPCC. Divide il mondo in 32 regioni e simula energia, suolo, acqua e clima con dati reali.</p>
-  <p>Gli abbiamo aggiunto una fonte elettrica nuova: pulita, disponibile giorno e notte, in tutto il mondo. Tra il 2030 e il 2050 il suo costo scende fino a un terzo, un decimo, un trentesimo o un centesimo di quello di oggi. Confrontiamo il risultato con lo stesso mondo senza la nuova fonte.</p>
+  <p>Gli abbiamo aggiunto una fonte elettrica nuova: pulita, disponibile giorno e notte, in tutto il mondo. Tra il 2030 e il 2050 il suo costo scende fino a un terzo, un decimo, un trentesimo o un centesimo di quanto costerebbe il nucleare negli stessi anni. Confrontiamo il risultato con lo stesso mondo senza la nuova fonte.</p>
   <div id="gcorpo"></div>
  </div>
 </section>
@@ -200,7 +201,8 @@ input[type=range]{width:100%;height:32px;margin:2px 0;accent-color:var(--color-t
    <div><b>Cosa è ipotesi</b><p>Le soglie della sezione 3 sono stime di massima. Gli effetti su lavoro, disuguaglianza e politica sono ipotesi ragionevoli, non misure: servono a capire quali scelte cambiano il risultato.</p></div>
    <div><b>Prossimi passi</b><p>Verificare le soglie della sezione 3 una per una, simulare in GCAM la fusione come tecnologia a sé invece del nucleare a costo ridotto, e provare uno scenario in cui anche le reti costano meno.</p></div>
   </div>
-  <p style="margin-top:24px"><a class="torna" href="../index.html">← Torna alle domande</a></p>
+  <p style="margin-top:24px"><a class="btn primario" href="verifica.html" style="text-decoration:none">Verifica i calcoli e le ipotesi →</a></p>
+  <p style="margin-top:12px"><a class="torna" href="../index.html">← Torna alle domande</a></p>
  </div>
 </section>
 </main>
@@ -350,7 +352,7 @@ function renderGcam(){
  </div>
  <h3 class="titolo-piccolo" style="margin-top:36px">Regione per regione, nel 2050</h3>
  <div style="overflow-x:auto"><table class="gtab"><thead><tr><th>Regione</th><th>Prezzo di produzione</th><th>Prezzo per le case</th><th>CO₂</th><th>Petrolio estratto</th></tr></thead><tbody>${righe}</tbody></table></div>
- <p class="piccolo secondario" style="margin-top:12px">Differenze rispetto allo stesso mondo senza la nuova fonte. Lo scenario di riferimento di GCAM (versione 9.1) ha popolazione ed economia a metà tra gli scenari dell'IPCC e nessuna nuova politica per il clima. La nuova fonte è simulata con la tecnologia nucleare di GCAM a costi ridotti: fa le veci della fusione.</p>`;
+ <p class="piccolo secondario" style="margin-top:12px">Differenze rispetto allo stesso mondo senza la nuova fonte. Lo scenario di riferimento di GCAM (versione 9.1) ha popolazione ed economia a metà tra gli scenari dell'IPCC e nessuna nuova politica per il clima. La nuova fonte è simulata con la tecnologia nucleare di GCAM a costi ridotti: fa le veci della fusione. <a href="verifica.html#gcam">Come l'abbiamo modificata</a>.</p>`;
  drawG();
 }
 function drawG(){const s=document.getElementById('gsvg');if(!s||!gS)return;const W=s.clientWidth,H=s.clientHeight;if(!W)return;

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verifica i calcoli · Domanda 01 · Modelli futuribili</title>
+<meta name="description" content="Tutte le ipotesi, le formule, i controlli e i numeri della domanda 01 sull'energia, per verificarli a mano.">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.indice{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.indice a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--color-bordo);border-radius:var(--radius-full);color:var(--color-testo);text-decoration:none;font-weight:500;font-size:15px}
+table{width:100%;border-collapse:collapse;margin-top:20px;font-size:16px}
+th,td{padding:12px 10px;border-bottom:1px solid var(--color-filetto);text-align:left;vertical-align:top;font-weight:500}
+th{font:500 12px/1.3 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--color-testo-secondario)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td code{font:500 13px var(--font-mono);overflow-wrap:anywhere}
+.stato{display:inline-block;padding:4px 10px;border-radius:var(--radius-full);font:600 12px/1.2 var(--font-sans);white-space:nowrap}
+.s-ok{background:var(--color-oliva);color:var(--color-carta)}
+.s-dv{background:var(--color-terracotta-chiaro);color:var(--color-notte)}
+.s-sc{background:var(--color-grafite);color:var(--color-carta)}
+.legenda{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:12px;font-size:15px;font-weight:500}
+.formule{display:grid;gap:14px;margin-top:20px;max-width:900px}
+.formule div{background:var(--color-carta-profonda);border-radius:var(--radius-1);padding:14px 16px}
+.formule b{display:block;font-weight:600;margin-bottom:4px}
+.formule code{font:500 14px/1.5 var(--font-mono);color:var(--color-terracotta-scuro);overflow-wrap:anywhere}
+.esplora{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin-top:20px}
+label.c{display:grid;gap:6px;font-weight:600;font-size:15px}
+select{min-height:44px;font:500 16px var(--font-sans);padding:0 12px;border-radius:var(--radius-1);border:1px solid var(--color-bordo);background:var(--color-sfondo-rilievo);color:var(--color-testo)}
+.scroll{overflow-x:auto}
+ol.aperti{margin:20px 0 0;padding-left:1.4em;display:grid;gap:14px;max-width:900px}
+ol.aperti li{font-weight:500;line-height:1.55}
+ol.aperti b{font-weight:600}
+code{overflow-wrap:anywhere}
+.passi{margin:20px 0 0;padding-left:1.4em;display:grid;gap:10px;max-width:900px}
+@media(max-width:700px){
+ .stack thead{display:none}
+ .stack tr{display:grid;padding:10px 0;border-bottom:1px solid var(--color-filetto)}
+ .stack td{border:0;padding:3px 0;padding-left:7.5em;position:relative;text-align:left!important;white-space:normal!important}
+ .stack td::before{content:attr(data-l);position:absolute;left:0;width:7em;font:500 11px/1.4 var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--color-testo-secondario)}
+ table{font-size:15px}
+}
+</style>
+</head>
+<body>
+<header class="testata" data-theme="notte">
+ <div class="wrap">
+  <a class="marchio" href="../index.html">The Long <em>Shot.</em> <small>Modelli futuribili</small></a>
+  <nav aria-label="Principale"><a href="../index.html">Le domande</a><a href="index.html">Domanda 01</a></nav>
+ </div>
+</header>
+
+<main>
+<section class="band" data-theme="notte">
+ <div class="wrap">
+  <span class="etichetta-grande">Domanda 01 · Verifica</span>
+  <h1 class="domanda" style="margin-top:8px">Verifica i <em>calcoli</em></h1>
+  <p class="testo-grande secondario" style="margin-top:16px">Qui trovi tutto quello che serve per controllare i numeri della domanda 01 senza leggere il codice: ogni ipotesi con la sua fonte, le formule, il confronto con i dati reali, le modifiche fatte a GCAM e tutti i risultati, regione per regione. Se trovi un errore, segnalalo: è il motivo per cui questa pagina esiste.</p>
+  <nav class="indice" aria-label="Sezioni">
+   <a href="#ipotesi">Le ipotesi</a><a href="#formule">Le formule</a><a href="#realta">Confronto con i dati reali</a><a href="#gcam">Le modifiche a GCAM</a><a href="#numeri">Tutti i numeri</a><a href="#aperti">Punti deboli</a><a href="#rifare">Rifare tutto</a>
+  </nav>
+ </div>
+</section>
+
+<section class="band" data-theme="carta" id="ipotesi">
+ <div class="wrap">
+  <span class="etichetta-grande">1 · Le ipotesi</span>
+  <h2 class="titolo" style="margin-top:8px">Ogni scelta, <em>con la sua fonte</em></h2>
+  <p>Ogni riga è un'ipotesi usata nella pagina. La colonna "Stato" dice quanto è solida.</p>
+  <div class="legenda"><span><span class="stato s-ok">Verificata</span> confrontata con una fonte</span><span><span class="stato s-dv">Da verificare</span> plausibile, manca il controllo</span><span><span class="stato s-sc">Scelta nostra</span> non viene da dati: serve a esplorare</span></div>
+  <div class="scroll"><table class="stack" id="tipotesi"><thead><tr><th>N.</th><th>Ipotesi</th><th>Valore</th><th>Da dove viene</th><th>Stato</th><th>Dove nel codice</th></tr></thead><tbody></tbody></table></div>
+ </div>
+</section>
+
+<section class="band" data-theme="carta" id="formule" style="background:var(--color-carta-profonda)">
+ <div class="wrap">
+  <span class="etichetta-grande">2 · Le formule</span>
+  <h2 class="titolo" style="margin-top:8px">Come nasce <em>ogni numero</em></h2>
+  <p>Le formule dei numeri mostrati nella sezione GCAM. Tutti i dati di partenza sono nella sezione 5.</p>
+  <div class="formule" id="lformule"></div>
+ </div>
+</section>
+
+<section class="band" data-theme="oliva" id="realta">
+ <div class="wrap">
+  <span class="etichetta-grande">3 · Confronto con i dati reali</span>
+  <h2 class="titolo" style="margin-top:8px">GCAM parte <em>dal mondo vero?</em></h2>
+  <p>Il primo controllo: i valori di GCAM per il 2025, nello scenario di riferimento, confrontati con le statistiche più recenti. Se il punto di partenza è sbagliato, tutto il resto lo è.</p>
+  <div class="scroll"><table class="stack" id="trealta"><thead><tr><th>Grandezza</th><th class="n">GCAM, 2025</th><th class="n">Dato reale</th><th>Fonte</th><th>Giudizio</th></tr></thead><tbody></tbody></table></div>
+ </div>
+</section>
+
+<section class="band" data-theme="carta" id="gcam">
+ <div class="wrap">
+  <span class="etichetta-grande">4 · Le modifiche a GCAM</span>
+  <h2 class="titolo" style="margin-top:8px">L'unico punto in cui <em>abbiamo toccato il modello</em></h2>
+  <p>La nuova fonte è la tecnologia nucleare "large reactor" di GCAM con i costi ridotti. La tabella mostra i costi originali di GCAM, anno per anno, e per quanto li moltiplichiamo in ogni scenario. Il moltiplicatore scende in modo regolare dal 2030 al 2050, poi resta fisso.</p>
+  <p><b>Attenzione:</b> la riduzione si applica al costo che GCAM prevede per quell'anno, che scende già da solo. Nel 2050 "10 volte meno" vuol dire un decimo del costo del nucleare di GCAM nel 2050, cioè circa un quindicesimo di quello del 2025.</p>
+  <div class="scroll"><table class="stack" id="tgcam"><thead><tr><th>Anno</th><th class="n">Capitale<br>$1975 per kW</th><th class="n">Manutenzione fissa<br>$1975 per kW l'anno</th><th class="n">Manutenzione variabile<br>$1975 per MWh</th><th class="n">× 3 volte meno</th><th class="n">× 10</th><th class="n">× 30</th><th class="n">× 100</th></tr></thead><tbody></tbody></table></div>
+  <p class="piccolo secondario" style="margin-top:12px">Lo stesso moltiplicatore riduce anche il combustibile per MWh. In tutte le regioni la scelta della nuova fonte non è frenata da limiti politici dal 2035. Il file completo delle modifiche è <a href="https://github.com/Ale2588/Modelli-futuribili-TLS/blob/main/energia/gcam/genera_scenari.py">genera_scenari.py</a>.</p>
+ </div>
+</section>
+
+<section class="band" data-theme="notte" id="numeri">
+ <div class="wrap">
+  <span class="etichetta-grande">5 · Tutti i numeri</span>
+  <h2 class="titolo" style="margin-top:8px">I risultati di GCAM, <em>regione per regione</em></h2>
+  <p class="secondario">Scegli scenario, regione e indicatore: vedi il valore anno per anno, quello dello scenario di riferimento e la differenza. Gli stessi dati sono scaricabili in un unico file per rifare i calcoli in un foglio di calcolo.</p>
+  <p><a class="btn primario" href="dati/risultati_gcam.csv" style="text-decoration:none">Scarica tutti i risultati (CSV)</a> <a class="btn" href="https://github.com/Ale2588/Modelli-futuribili-TLS/tree/main/energia/gcam/risultati" style="text-decoration:none;margin-left:8px">File grezzi su GitHub</a></p>
+  <div class="esplora">
+   <label class="c">Scenario<select id="ssc"></select></label>
+   <label class="c">Regione<select id="sre"></select></label>
+   <label class="c">Indicatore<select id="sin"></select></label>
+  </div>
+  <p class="piccolo secondario" id="sunita" style="margin-top:12px"></p>
+  <div class="scroll"><table class="stack" id="tnum"><thead><tr><th>Anno</th><th class="n">Scenario</th><th class="n">Riferimento</th><th class="n">Differenza</th></tr></thead><tbody><tr><td colspan="4">Caricamento dei dati…</td></tr></tbody></table></div>
+ </div>
+</section>
+
+<section class="band" data-theme="terracotta" id="aperti">
+ <div class="wrap">
+  <span class="etichetta-grande">6 · Punti deboli</span>
+  <h2 class="titolo" style="margin-top:8px">Dove guarderei <em>per primo</em></h2>
+  <ol class="aperti">
+   <li><b>"Nuova fonte e nucleare" sono sommati.</b> Il grafico e la quota includono anche il nucleare che esiste già. Nel riferimento il nucleare pesa l'8% nel 2050: la quota della sola nuova fonte è un po' più bassa di quella mostrata.</li>
+   <li><b>"10 volte meno" è relativo al nucleare di GCAM nello stesso anno</b>, non al prezzo di oggi (vedi sezione 4). Il testo della pagina principale semplifica questo punto.</li>
+   <li><b>Le soglie delle industrie (sezione 3 della pagina) non sono verificate.</b> Sono ordini di grandezza nostri. Ognuna andrebbe confrontata con studi di settore.</li>
+   <li><b>GCAM parte un po' più freddo della realtà:</b> +1,3 °C nel 2025 contro circa +1,4 °C misurati. I valori assoluti di temperatura vanno letti con cautela; le differenze tra scenari sono più affidabili.</li>
+   <li><b>Il calo dell'idrogeno non è spiegato.</b> Con elettricità più economica GCAM produce meno idrogeno. Un'ipotesi: conviene usare l'elettricità direttamente. Va controllato prima di raccontarlo.</li>
+   <li><b>I prezzi sono confrontati solo in percentuale.</b> GCAM lavora in dollari del 1975 per gigajoule; non abbiamo ancora convertito e verificato i valori assoluti.</li>
+   <li><b>Le reti non cambiano.</b> È una scelta: mostra il "pavimento", ma un mondo con energia molto economica probabilmente investirebbe anche nelle reti.</li>
+   <li><b>Le sezioni 4 e 5 della pagina (mondi e scarsità) vengono dal nostro modello semplificato</b>, con coefficienti scelti da noi. Sono strumenti per ragionare, non risultati.</li>
+  </ol>
+ </div>
+</section>
+
+<section class="band" data-theme="carta" id="rifare">
+ <div class="wrap">
+  <span class="etichetta-grande">7 · Rifare tutto</span>
+  <h2 class="titolo" style="margin-top:8px">Dalla prima riga <em>all'ultimo numero</em></h2>
+  <ol class="passi">
+   <li>Scaricare GCAM dal <a href="https://github.com/JGCRI/gcam-core">repository ufficiale</a> e compilarlo con <code>HAVE_JAVA = 0</code>. Nel file <code>reporting/source/xml_db_outputter.cpp</code> impostare <code>DEBUG_XML_DB 1</code>: i risultati finiscono nel file <code>debug_db.xml</code>.</li>
+   <li>Generare i dati di input con il pacchetto R <code>gcamdata</code>: <code>driver(write_xml = TRUE)</code>. Servono almeno 12 GB di memoria e circa un'ora.</li>
+   <li>Lanciare <code>python3 gcam/genera_scenari.py</code> per creare i file degli scenari.</li>
+   <li>Per ogni scenario: <code>gcam.exe -C configuration_&lt;scenario&gt;.xml</code>. Circa un'ora l'uno; ogni uscita pesa 8–9 GB.</li>
+   <li>Estrarre gli indicatori con <code>gcam/estrai.py</code> e riassumerli con <code>gcam/sintesi.py</code>.</li>
+  </ol>
+  <p style="margin-top:20px">Tutto il codice è nel <a href="https://github.com/Ale2588/Modelli-futuribili-TLS">repository pubblico</a>; le istruzioni dettagliate sono nel README.</p>
+  <p><a class="torna" href="index.html" style="font-weight:600">← Torna alla domanda 01</a></p>
+ </div>
+</section>
+</main>
+
+<footer class="piede" data-theme="notte">
+ <div class="wrap">
+  <span class="etichetta">The Long Shot · Modelli futuribili · Domanda 01 · Verifica</span>
+  <a class="etichetta" href="https://github.com/Ale2588/Modelli-futuribili-TLS">Codice su GitHub</a>
+ </div>
+</footer>
+
+<script>
+{
+const GH='https://github.com/Ale2588/Modelli-futuribili-TLS/blob/main/energia/';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ST={ok:['Verificata','s-ok'],dv:['Da verificare','s-dv'],sc:['Scelta nostra','s-sc']};
+const IP=[
+ ['G1','Scenario di riferimento','Configurazione standard di GCAM 9.1: popolazione ed economia a metà tra gli scenari IPCC (SSP2), nessuna nuova politica per il clima','GCAM, file configuration_ref.xml','ok','gcam/scenari/configuration_riferimento.xml'],
+ ['G2','La fusione è simulata con il nucleare di GCAM','Tecnologia "large reactor": programmabile, senza emissioni','Scelta nostra: GCAM non ha una tecnologia di fusione','sc','gcam/genera_scenari.py'],
+ ['G3','Il costo della nuova fonte scende fino a 1/3, 1/10, 1/30, 1/100','Discesa regolare dal 2030 al 2050, poi costante (sezione 4)','Scelta nostra','sc','gcam/genera_scenari.py'],
+ ['G4','Scendono capitale, manutenzione e combustibile','Tutti con lo stesso moltiplicatore','Scelta nostra','sc','gcam/genera_scenari.py'],
+ ['G5','La nuova fonte è disponibile ovunque','Nessun freno politico in nessuna regione dal 2035','Scelta nostra','sc','gcam/genera_scenari.py'],
+ ['G6','Le reti costano come nel riferimento','Nessuna modifica a trasmissione e distribuzione','Scelta nostra: isola l\'effetto della sola produzione','sc','gcam/genera_scenari.py'],
+ ['G7','Conversioni di unità','CO₂: milioni di tonnellate di carbonio × 3,667 ÷ 1000 = miliardi di tonnellate di CO₂. Elettricità: 1 EJ = 277,8 TWh','Fattori fisici standard','ok','gcam/sintesi.py'],
+ ['S1','La bolletta di casa è metà energia e metà reti e oneri','50% produzione, 50% reti, accumuli, oneri','Semplificazione nostra; da confrontare con i dati ARERA','dv','modello.js'],
+ ['S2','L\'industria paga soprattutto l\'energia','75% produzione, 25% reti','Semplificazione nostra; da confrontare con i dati ARERA ed Eurostat','dv','modello.js'],
+ ['S3','Prezzo dell\'energia per l\'industria oggi','circa 100 € per MWh','Ordine di grandezza del prezzo all\'ingrosso italiano; da verificare sul prezzo unico nazionale','dv','modello.js'],
+ ['S4','Quanto crescono i consumi se il prezzo scende','elasticità 0,6: prezzo dimezzato, consumi +52% nel lungo periodo','Valore plausibile di lungo periodo; da confrontare con la letteratura','dv','modello.js'],
+ ['S5','Soglie di convenienza delle otto produzioni','da 120 a 3 € per MWh (pagina, sezione 3)','Stime nostre, una per una da verificare','dv','modello.js'],
+ ['S6','Come si diffonde il nuovo prezzo','curva a S; la leva "Quanto in fretta" sposta il punto a metà strada','Forma tipica delle tecnologie; parametri scelti da noi','sc','modello.js'],
+ ['S7','Effetti su lavoro, disuguaglianza, tensioni, scarsità','coefficienti nella funzione mondo()','Scelte nostre: servono a esplorare, non a misurare','sc','modello.js'],
+ ['S8','Quale "mondo" esce','regole di classificazione con soglie su disuguaglianza, disoccupazione, accesso','Scelte nostre','sc','modello.js']];
+document.querySelector('#tipotesi tbody').innerHTML=IP.map(([id,ip,val,fonte,st,file])=>`<tr><td data-l="N.">${id}</td><td data-l="Ipotesi"><b style="font-weight:600">${esc(ip)}</b></td><td data-l="Valore">${esc(val)}</td><td data-l="Fonte">${esc(fonte)}</td><td data-l="Stato"><span class="stato ${ST[st][1]}">${ST[st][0]}</span></td><td data-l="Codice"><a href="${GH+file}"><code>${esc(file)}</code></a></td></tr>`).join('');
+
+const FO=[
+ ['Quota della nuova fonte','elettricità da "nucleare" in GCAM ÷ elettricità totale, nello stesso anno, somma di tutte le regioni'],
+ ['Variazione di un indicatore','(valore nello scenario ÷ valore nel riferimento − 1) × 100, nello stesso anno'],
+ ['Prezzo di produzione nel mondo','media dei costi del settore "electricity" delle 32 regioni, pesata sull\'elettricità prodotta da ciascuna'],
+ ['Prezzo per le case','come sopra, ma con il costo del settore "elect_td_bld", cioè l\'elettricità consegnata agli edifici, reti comprese'],
+ ['CO₂','somma delle emissioni di CO₂ di tutte le regioni, convertita in miliardi di tonnellate (G7)'],
+ ['Temperatura','variabile global_tas del modello climatico Hector incluso in GCAM, rispetto al periodo preindustriale'],
+ ['Petrolio estratto','somma dell\'offerta di greggio sui mercati di tutte le regioni, in exajoule']];
+document.getElementById('lformule').innerHTML=FO.map(([a,b])=>`<div><b>${esc(a)}</b><code>${esc(b)}</code></div>`).join('');
+
+const RE=[
+ ['Elettricità prodotta nel mondo','31.700 TWh','30.856 TWh (domanda 2024)','Ember, Global Electricity Review 2025','https://ember-energy.org/latest-insights/global-electricity-review-2025/global-electricity-trends/','Coerente: con la crescita del 4% annuo il 2025 è vicino al valore di GCAM'],
+ ['Quota del nucleare','9,8%','9,0% (2024)','Ember, Global Electricity Review 2025','https://ember-energy.org/chapter/2024-in-review/','Coerente'],
+ ['CO₂ da combustibili fossili','39,0 miliardi di t','38,1 miliardi di t (2025)','Global Carbon Budget 2025','https://globalcarbonbudget.org/?p=2286','Coerente (GCAM include anche alcune emissioni industriali)'],
+ ['Riscaldamento globale','+1,3 °C','+1,44 °C (2025)','Organizzazione meteorologica mondiale','https://wmo.int/node/38190','GCAM parte circa 0,15 °C più basso: vedi punti deboli'],
+ ['Petrolio greggio','198 EJ','103 milioni di barili al giorno (2025, greggio e liquidi da gas)','Energy Institute, Statistical Review 2026','https://dieselnet.com/news/2026/07energyreview.php','Coerente nell\'ordine di grandezza; da convertire con più precisione'],
+ ['Elettricità in Europa occidentale','2.845 TWh (regione EU-15 di GCAM)','2.727 TWh (Unione europea, 2024)','Ember, Global Electricity Review 2025','https://ember-energy.org/latest-insights/global-electricity-review-2025/global-electricity-trends/','Coerente; le due regioni non coincidono del tutto']];
+document.querySelector('#trealta tbody').innerHTML=RE.map(([g,a,b,f,u,j])=>`<tr><td data-l="Grandezza"><b style="font-weight:600">${esc(g)}</b></td><td class="n" data-l="GCAM 2025">${esc(a)}</td><td class="n" data-l="Dato reale">${esc(b)}</td><td data-l="Fonte"><a href="${u}">${esc(f)}</a></td><td data-l="Giudizio">${esc(j)}</td></tr>`).join('');
+
+const MO=[{"anno":2025,"capitale":1355.0,"fisso":41.24,"variabile":0.66,"molt":{"3":1.0,"10":1.0,"30":1.0,"100":1.0}},{"anno":2030,"capitale":1355.0,"fisso":41.24,"variabile":0.66,"molt":{"3":1.0,"10":1.0,"30":1.0,"100":1.0}},{"anno":2035,"capitale":1296.0,"fisso":41.24,"variabile":0.66,"molt":{"3":0.7598,"10":0.5623,"30":0.4273,"100":0.3162}},{"anno":2040,"capitale":1119.0,"fisso":41.24,"variabile":0.66,"molt":{"3":0.5774,"10":0.3162,"30":0.1826,"100":0.1}},{"anno":2045,"capitale":1002.0,"fisso":41.24,"variabile":0.66,"molt":{"3":0.4387,"10":0.1778,"30":0.078,"100":0.0316}},{"anno":2050,"capitale":884.0,"fisso":41.24,"variabile":0.66,"molt":{"3":0.3333,"10":0.1,"30":0.0333,"100":0.01}},{"anno":2060,"capitale":875.0,"fisso":40.83,"variabile":0.65,"molt":{"3":0.3333,"10":0.1,"30":0.0333,"100":0.01}},{"anno":2080,"capitale":858.0,"fisso":40.02,"variabile":0.64,"molt":{"3":0.3333,"10":0.1,"30":0.0333,"100":0.01}},{"anno":2100,"capitale":841.0,"fisso":39.23,"variabile":0.63,"molt":{"3":0.3333,"10":0.1,"30":0.0333,"100":0.01}}];
+const fm=(v,d)=>v.toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d});
+document.querySelector('#tgcam tbody').innerHTML=MO.map(r=>`<tr><td data-l="Anno">${r.anno}</td><td class="n" data-l="Capitale">${fm(r.capitale,0)}</td><td class="n" data-l="Manut. fissa">${fm(r.fisso,2)}</td><td class="n" data-l="Manut. variab.">${fm(r.variabile,2)}</td>${['3','10','30','100'].map(f=>`<td class="n" data-l="× ${f} meno">${fm(r.molt[f],r.molt[f]<0.1?4:3)}</td>`).join('')}</tr>`).join('');
+
+// Esploratore dei risultati
+const SC=['riferimento','3 volte meno','10 volte meno','30 volte meno','100 volte meno'];
+let DATI=null;
+const nomeInd=s=>s.replace(/^elettricita_prodotta_/,'Elettricità prodotta: ').replace(/^costo_/,'Costo del settore: ').replace(/^produzione_/,'Produzione: ').replace(/^petrolio_greggio_offerta$/,'Petrolio greggio estratto').replace(/^petrolio_greggio_prezzo$/,'Prezzo del petrolio greggio').replace(/^temperatura_globale$/,'Temperatura globale').replace(/^co2$/,'Emissioni di CO₂');
+const tb=document.querySelector('#tnum tbody'),sS=document.getElementById('ssc'),sR=document.getElementById('sre'),sI=document.getElementById('sin');
+function opt(sel,vals,lab){const cur=sel.value;sel.innerHTML=vals.map(v=>`<option value="${esc(v)}">${esc(lab?lab(v):v)}</option>`).join('');if(vals.includes(cur))sel.value=cur}
+function aggiorna(){
+ if(!DATI)return;
+ const reg=sR.value;opt(sI,[...new Set(DATI.filter(r=>r[1]===reg).map(r=>r[2]))].sort(),nomeInd);
+ const ind=sI.value,sc=sS.value;
+ const pick=s=>DATI.filter(r=>r[0]===s&&r[1]===reg&&r[2]===ind);
+ const a=pick(sc),b=pick('riferimento');
+ document.getElementById('sunita').textContent=a.length?'Unità: '+a[0][3]:'';
+ tb.innerHTML=a.map(r=>{const rf=b.find(x=>x[4]===r[4]);const v=+r[5],w=rf?+rf[5]:NaN;const d=w?((v/w-1)*100):NaN;
+  return `<tr><td data-l="Anno">${r[4]}</td><td class="n" data-l="Scenario">${fm(v,v<10?3:1)}</td><td class="n" data-l="Riferimento">${isNaN(w)?'–':fm(w,w<10?3:1)}</td><td class="n" data-l="Differenza">${isNaN(d)||sc==='riferimento'?'–':(d>0?'+':'')+fm(d,1)+'%'}</td></tr>`}).join('')||'<tr><td colspan="4">Nessun dato per questa combinazione.</td></tr>';
+}
+fetch('dati/risultati_gcam.csv').then(r=>{if(!r.ok)throw new Error(r.status);return r.text()}).then(t=>{
+ DATI=t.trim().split('\n').slice(1).map(l=>l.split(','));
+ opt(sS,SC);sS.value='10 volte meno';
+ const regs=[...new Set(DATI.map(r=>r[1]))].sort((x,y)=>x==='Mondo'?-1:y==='Mondo'?1:x.localeCompare(y));opt(sR,regs);sR.value='EU-15';
+ aggiorna();
+}).catch(()=>{tb.innerHTML='<tr><td colspan="4">I dati non si caricano da qui. Scarica il file CSV con il pulsante qui sopra.</td></tr>'});
+[sS,sR,sI].forEach(s=>s.addEventListener('change',aggiorna));
+}
+</script>
+</body>
+</html>
